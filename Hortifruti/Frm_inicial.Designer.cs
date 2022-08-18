@@ -128,9 +128,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(736, 518);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 16);
+            this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Vs. 1.0";
+            this.label1.Text = "Vs. 1.0.1";
             // 
             // Frm_inicial
             // 

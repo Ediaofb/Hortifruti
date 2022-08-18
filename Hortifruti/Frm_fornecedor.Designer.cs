@@ -90,7 +90,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(35, 65);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 133);
+            this.groupBox1.Size = new System.Drawing.Size(839, 133);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por:";
@@ -103,6 +103,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -115,9 +116,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 51);
+            this.textBox1.Location = new System.Drawing.Point(15, 47);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 23);
+            this.textBox1.Size = new System.Drawing.Size(349, 23);
             this.textBox1.TabIndex = 3;
             // 
             // dgvProduto
@@ -229,6 +230,7 @@
             // hortifruti_dbDataSet2
             // 
             this.hortifruti_dbDataSet2.DataSetName = "hortifruti_dbDataSet2";
+            this.hortifruti_dbDataSet2.EnforceConstraints = false;
             this.hortifruti_dbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fillByToolStrip1

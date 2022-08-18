@@ -10,7 +10,6 @@ namespace Hortifruti
 
         SqlConnection conexao;
         SqlCommand comando;
-        SqlDataAdapter da;
         SqlDataReader dr;
         string strSQL, aux, aux1;
 

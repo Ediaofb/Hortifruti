@@ -35,7 +35,6 @@
             this.hortifrutidbDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hortifruti_dbDataSet4 = new Hortifruti.hortifruti_dbDataSet4();
             this.VendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hortifruti_dbDataSet1 = new Hortifruti.hortifruti_dbDataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.vendasTableAdapter = new Hortifruti.hortifruti_dbDataSet1TableAdapters.VendasTableAdapter();
             this.vendasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -45,13 +44,12 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.cb_clientes = new System.Windows.Forms.ComboBox();
             this.btn_consult_rel_vendas = new System.Windows.Forms.Button();
+            this.tb_clientes = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hortifrutidbDataSet4BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hortifruti_dbDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VendasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hortifruti_dbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,11 +73,6 @@
             // 
             this.VendasBindingSource.DataMember = "Vendas";
             this.VendasBindingSource.DataSource = this.hortifruti_dbDataSet4;
-            // 
-            // hortifruti_dbDataSet1
-            // 
-            this.hortifruti_dbDataSet1.DataSetName = "hortifruti_dbDataSet1";
-            this.hortifruti_dbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -134,14 +127,14 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(115, 22);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(221, 20);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(117, 56);
+            this.dateTimePicker2.Location = new System.Drawing.Point(115, 56);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(196, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(219, 20);
             this.dateTimePicker2.TabIndex = 4;
             // 
             // label3
@@ -154,14 +147,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "CLiente:";
             // 
-            // cb_clientes
-            // 
-            this.cb_clientes.FormattingEnabled = true;
-            this.cb_clientes.Location = new System.Drawing.Point(430, 39);
-            this.cb_clientes.Name = "cb_clientes";
-            this.cb_clientes.Size = new System.Drawing.Size(417, 21);
-            this.cb_clientes.TabIndex = 6;
-            // 
             // btn_consult_rel_vendas
             // 
             this.btn_consult_rel_vendas.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,13 +158,20 @@
             this.btn_consult_rel_vendas.UseVisualStyleBackColor = true;
             this.btn_consult_rel_vendas.Click += new System.EventHandler(this.btn_consult_rel_vendas_Click);
             // 
+            // tb_clientes
+            // 
+            this.tb_clientes.Location = new System.Drawing.Point(430, 38);
+            this.tb_clientes.Name = "tb_clientes";
+            this.tb_clientes.Size = new System.Drawing.Size(451, 20);
+            this.tb_clientes.TabIndex = 8;
+            // 
             // FrmRelVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 613);
+            this.Controls.Add(this.tb_clientes);
             this.Controls.Add(this.btn_consult_rel_vendas);
-            this.Controls.Add(this.cb_clientes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -194,7 +186,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.hortifrutidbDataSet4BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hortifruti_dbDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VendasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hortifruti_dbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,7 +195,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private hortifruti_dbDataSet1 hortifruti_dbDataSet1;
         private hortifruti_dbDataSet1TableAdapters.VendasTableAdapter vendasTableAdapter;
         private hortifruti_dbDataSet4 hortifruti_dbDataSet4;
         private System.Windows.Forms.BindingSource hortifrutidbDataSet4BindingSource;
@@ -217,7 +207,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb_clientes;
         private System.Windows.Forms.Button btn_consult_rel_vendas;
+        private System.Windows.Forms.TextBox tb_clientes;
     }
 }

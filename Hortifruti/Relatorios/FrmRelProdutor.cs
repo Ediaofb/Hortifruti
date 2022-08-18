@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hortifruti.Relatorios
@@ -20,8 +13,14 @@ namespace Hortifruti.Relatorios
         private void FrmrRelProdutorcs_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet.Produtor'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet.Produtor);
+            this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet.Produtor, "");
+            this.reportViewer1.RefreshReport();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet.Produtor'. Você pode movê-la ou removê-la conforme necessário.
+            this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet.Produtor, tb_produtor.Text);
             this.reportViewer1.RefreshReport();
         }
     }

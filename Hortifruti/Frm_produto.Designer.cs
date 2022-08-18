@@ -30,16 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProduto = new System.Windows.Forms.DataGridView();
-            this.idProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_voltar_cli = new System.Windows.Forms.Button();
+            this.idProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,37 +60,12 @@
             this.dgvProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProduto,
             this.nome,
-            this.tipo,
             this.preço});
             this.dgvProduto.Location = new System.Drawing.Point(37, 204);
             this.dgvProduto.Name = "dgvProduto";
             this.dgvProduto.Size = new System.Drawing.Size(875, 384);
             this.dgvProduto.TabIndex = 1;
             this.dgvProduto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellContentClick);
-            // 
-            // idProduto
-            // 
-            this.idProduto.DataPropertyName = "idProduto";
-            this.idProduto.HeaderText = "Identificador:";
-            this.idProduto.Name = "idProduto";
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            this.nome.HeaderText = "Nome:";
-            this.nome.Name = "nome";
-            // 
-            // tipo
-            // 
-            this.tipo.DataPropertyName = "tipo";
-            this.tipo.HeaderText = "Tipo:";
-            this.tipo.Name = "tipo";
-            // 
-            // preço
-            // 
-            this.preço.DataPropertyName = "preço";
-            this.preço.HeaderText = "Preço:";
-            this.preço.Name = "preço";
             // 
             // groupBox1
             // 
@@ -153,6 +127,24 @@
             this.btn_voltar_cli.UseVisualStyleBackColor = true;
             this.btn_voltar_cli.Click += new System.EventHandler(this.btn_voltar_cli_Click);
             // 
+            // idProduto
+            // 
+            this.idProduto.DataPropertyName = "idProduto";
+            this.idProduto.HeaderText = "Identificador:";
+            this.idProduto.Name = "idProduto";
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome:";
+            this.nome.Name = "nome";
+            // 
+            // preço
+            // 
+            this.preço.DataPropertyName = "preço";
+            this.preço.HeaderText = "Preço:";
+            this.preço.Name = "preço";
+            // 
             // Frm_produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,10 +176,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_voltar_cli;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn preço;
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -2,23 +2,57 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>RELATÓRIO DE PRODUTORES</Value>
+                <Style>
+                  <FontFamily>Book Antiqua</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>0.03528cm</Top>
+        <Height>0.6cm</Height>
+        <Width>22.93937cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.21979cm</Width>
+              <Width>3.38604cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.16892cm</Width>
+              <Width>3.32021cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.1533cm</Width>
+              <Width>6.54343cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.59767cm</Width>
+              <Width>3.74354cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.09871cm</Width>
+              <Width>5.04cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -36,7 +70,7 @@
                             <TextRun>
                               <Value>IDENTIFICADOR</Value>
                               <Style>
-                                <FontFamily>book Antiqua</FontFamily>
+                                <FontFamily>bOOK Antiqua</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -71,7 +105,7 @@
                             <TextRun>
                               <Value>NOME</Value>
                               <Style>
-                                <FontFamily>Book Antiqua</FontFamily>
+                                <FontFamily>BOOK Antiqua</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -97,7 +131,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox7">
+                    <Textbox Name="Textbox9">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -106,42 +140,7 @@
                             <TextRun>
                               <Value>ENDEREÇO</Value>
                               <Style>
-                                <FontFamily>Book Antiqua</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox9">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>TELEFONE</Value>
-                              <Style>
-                                <FontFamily>Book Antiqua</FontFamily>
+                                <FontFamily>BOOk Antiqua</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -167,6 +166,41 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>TELEFONE</Value>
+                              <Style>
+                                <FontFamily>BOOK Antiqua</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox11">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -174,7 +208,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>IDENTIFICADOR PRODUTO</Value>
+                              <Value>E_MAIL</Value>
                               <Style>
                                 <FontFamily>Book Antiqua</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -203,7 +237,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.70583cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -335,14 +369,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="idProduto">
+                    <Textbox Name="e_mail">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!idProduto.Value</Value>
+                              <Value>=Fields!e_mail.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -351,7 +385,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>idProduto</rd:DefaultName>
+                      <rd:DefaultName>e_mail</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -363,6 +397,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -388,52 +423,18 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dataset_tblProdutores</DataSetName>
-        <Top>1.93076cm</Top>
-        <Left>1.18745cm</Left>
-        <Height>1.30583cm</Height>
-        <Width>19.23839cm</Width>
+        <DataSetName>DataSet2</DataSetName>
+        <Top>1.74556cm</Top>
+        <Left>0.58208cm</Left>
+        <Height>1.2cm</Height>
+        <Width>22.03322cm</Width>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox13">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>RELATÓRIO DE PRODUTORES</Value>
-                <Style>
-                  <FontFamily>Book Antiqua</FontFamily>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>0.03528cm</Top>
-        <Height>0.6cm</Height>
-        <Width>22.93937cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />
@@ -556,7 +557,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dataset_tblProdutores">
+    <DataSet Name="DataSet2">
       <Query>
         <DataSourceName>hortifruti_dbDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -578,14 +579,18 @@
           <DataField>Telefone</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="idProduto">
-          <DataField>idProduto</DataField>
+        <Field Name="IdProduto">
+          <DataField>IdProduto</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="e_mail">
+          <DataField>e_mail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>hortifruti_dbDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Edson\source\repos\Hortifruti\Hortifruti\hortifruti_dbDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>hortifruti_dbDataSet5</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Edson\source\repos\Hortifruti\Hortifruti\hortifruti_dbDataSet5.xsd</rd:SchemaPath>
         <rd:TableName>Produtor</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

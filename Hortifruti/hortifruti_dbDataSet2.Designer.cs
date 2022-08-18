@@ -325,7 +325,7 @@ namespace Hortifruti {
             this.DataSetName = "hortifruti_dbDataSet2";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/hortifruti_dbDataSet2.xsd";
-            this.EnforceConstraints = true;
+            this.EnforceConstraints = false;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCliente = new ClienteDataTable();
             base.Tables.Add(this.tableCliente);
@@ -5669,7 +5669,7 @@ SELECT Id_produtor, Nome, Endereco, Telefone, IdProduto FROM Produtor WHERE (Id_
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Vendas] WHERE (([Id_vendas] = @Original_Id_vendas) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Quantidade = 1 AND [Quantidade] IS NULL) OR ([Quantidade] = @Original_Quantidade)) AND ((@IsNull_Preco_unitario = 1 AND [Preco_unitario] IS NULL) OR ([Preco_unitario] = @Original_Preco_unitario)) AND ((@IsNull_Preco_total = 1 AND [Preco_total] IS NULL) OR ([Preco_total] = @Original_Preco_total)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL) OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_NomeProduto = 1 AND [NomeProduto] IS NULL) OR ([NomeProduto] = @Original_NomeProduto)) AND ([Pago] = @Original_Pago))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Vendas] WHERE (([Id_vendas] = @Original_Id_vendas) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Quantidade = 1 AND [Quantidade] IS NULL) OR ([Quantidade] = @Original_Quantidade)) AND ((@IsNull_Preco_unitario = 1 AND [Preco_unitario] IS NULL) OR ([Preco_unitario] = @Original_Preco_unitario)) AND ((@IsNull_Preco_total = 1 AND [Preco_total] IS NULL) OR ([Preco_total] = @Original_Preco_total)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL) OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_NomeProduto = 1 AND [NomeProduto] IS NULL) OR ([NomeProduto] = @Original_NomeProduto)) AND ([Pago] = @Original_Pago))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_vendas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_vendas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5687,7 +5687,7 @@ SELECT Id_produtor, Nome, Endereco, Telefone, IdProduto FROM Produtor WHERE (Id_
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pago", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Vendas] ([Data], [Quantidade], [Preco_unitario], [Preco_total], [Cliente], [NomeProduto], [Pago]) VALUES (@Data, @Quantidade, @Preco_unitario, @Preco_total, @Cliente, @NomeProduto, @Pago);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Vendas] ([Data], [Quantidade], [Preco_unitario], [Preco_total], [Cliente], [NomeProduto], [Pago]) VALUES (@Data, @Quantidade, @Preco_unitario, @Preco_total, @Cliente, @NomeProduto, @Pago);
 SELECT Id_vendas, Data, Quantidade, Preco_unitario, Preco_total, Cliente, NomeProduto, Pago FROM Vendas WHERE (Id_vendas = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5699,7 +5699,7 @@ SELECT Id_vendas, Data, Quantidade, Preco_unitario, Preco_total, Cliente, NomePr
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pago", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Vendas] SET [Data] = @Data, [Quantidade] = @Quantidade, [Preco_unitario] = @Preco_unitario, [Preco_total] = @Preco_total, [Cliente] = @Cliente, [NomeProduto] = @NomeProduto, [Pago] = @Pago WHERE (([Id_vendas] = @Original_Id_vendas) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Quantidade = 1 AND [Quantidade] IS NULL) OR ([Quantidade] = @Original_Quantidade)) AND ((@IsNull_Preco_unitario = 1 AND [Preco_unitario] IS NULL) OR ([Preco_unitario] = @Original_Preco_unitario)) AND ((@IsNull_Preco_total = 1 AND [Preco_total] IS NULL) OR ([Preco_total] = @Original_Preco_total)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL) OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_NomeProduto = 1 AND [NomeProduto] IS NULL) OR ([NomeProduto] = @Original_NomeProduto)) AND ([Pago] = @Original_Pago));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Vendas] SET [Data] = @Data, [Quantidade] = @Quantidade, [Preco_unitario] = @Preco_unitario, [Preco_total] = @Preco_total, [Cliente] = @Cliente, [NomeProduto] = @NomeProduto, [Pago] = @Pago WHERE (([Id_vendas] = @Original_Id_vendas) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Quantidade = 1 AND [Quantidade] IS NULL) OR ([Quantidade] = @Original_Quantidade)) AND ((@IsNull_Preco_unitario = 1 AND [Preco_unitario] IS NULL) OR ([Preco_unitario] = @Original_Preco_unitario)) AND ((@IsNull_Preco_total = 1 AND [Preco_total] IS NULL) OR ([Preco_total] = @Original_Preco_total)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL) OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_NomeProduto = 1 AND [NomeProduto] IS NULL) OR ([NomeProduto] = @Original_NomeProduto)) AND ([Pago] = @Original_Pago));
 SELECT Id_vendas, Data, Quantidade, Preco_unitario, Preco_total, Cliente, NomeProduto, Pago FROM Vendas WHERE (Id_vendas = @Id_vendas)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5739,8 +5739,8 @@ SELECT Id_vendas, Data, Quantidade, Preco_unitario, Preco_total, Cliente, NomePr
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_vendas, Data, Quantidade, Preco_unitario, Preco_total, Cliente, NomePro" +
-                "duto, Pago FROM dbo.Vendas";
+            this._commandCollection[0].CommandText = "SELECT        Id_vendas, Data, Quantidade, Preco_unitario, Preco_total, Cliente, " +
+                "NomeProduto, Pago\r\nFROM            Vendas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

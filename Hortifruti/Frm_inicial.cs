@@ -26,7 +26,7 @@ namespace Hortifruti
         {
             Frm_consulta ini = new Frm_consulta();
             ini.Show();
-            Hide();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -38,6 +38,7 @@ namespace Hortifruti
         {
             Frm_usuario usuario = new Frm_usuario();
             usuario.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)

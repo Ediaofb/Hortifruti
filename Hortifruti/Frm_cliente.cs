@@ -50,8 +50,6 @@ namespace Hortifruti
         {
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet2.Cliente'. Você pode movê-la ou removê-la conforme necessário.
             this.clienteTableAdapter.Fill(this.hortifruti_dbDataSet2.Cliente);
-            // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet2.Cliente'. Você pode movê-la ou removê-la conforme necessário.
-            this.clienteTableAdapter.Fill(this.hortifruti_dbDataSet2.Cliente);
 
         }
 

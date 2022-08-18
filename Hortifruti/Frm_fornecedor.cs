@@ -27,14 +27,12 @@ namespace Hortifruti
             DataTable data = new DataTable();
             adapter.Fill(data);
             dgvProduto.DataSource = data;
-            
-
         }
 
         private void Frm_fornecedor_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet3.Produtor'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtorTableAdapter1.Fill(this.hortifruti_dbDataSet3.Produtor);
+           //this.produtorTableAdapter1.Fill(this.hortifruti_dbDataSet3.Produtor);
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet2.Produtor'. Você pode movê-la ou removê-la conforme necessário.
             this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet2.Produtor);
 
@@ -79,6 +77,35 @@ catch (System.Exception ex) {
     System.Windows.Forms.MessageBox.Show(ex.Message);
 }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //define a string de conexao com provedor caminho e nome do banco de dados
+            string config = "Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True";
+            //define a instrução SQL
+            string query = /*String.Format(*/"SELECT * FROM PRODUTOR WHERE NOME LIKE %"+textBox1.Text+"%"/*, "bd")*/;
+            
+            //cria a conexão com o banco de dados
+            SqlConnection conexao = new SqlConnection(config);            
+            
+            //cria o objeto command para executar a instruçao sql
+            SqlCommand comand = new SqlCommand(query, conexao);
+
+            //abre a conexao
+            conexao.Open();
+
+            //define o tipo do comando
+            comand.CommandType = CommandType.Text;
+                        
+            //cria um dataadapter
+            SqlDataAdapter adapter = new SqlDataAdapter(comand);
+            //cria um objeto datatable
+            DataTable data = new DataTable();
+            //preenche o datatable via dataadapter
+            adapter.Fill(data);
+            //atribui o datatable ao datagridview para exibir o resultado
+            dgvProduto.DataSource = data;            
         }
     }
 }
