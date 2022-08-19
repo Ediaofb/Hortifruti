@@ -1,4 +1,0 @@
-caixa
-saco
-quilo
-unidade
