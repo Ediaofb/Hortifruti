@@ -131,9 +131,9 @@
             this.label4.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(577, 333);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
+            this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Vs. 1.0";
+            this.label4.Text = "Vs. 1.0.1";
             // 
             // Frm_login
             // 

@@ -92,6 +92,10 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.label63 = new System.Windows.Forms.Label();
             this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
             this.label58 = new System.Windows.Forms.Label();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
@@ -138,6 +142,10 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
+            this.label61 = new System.Windows.Forms.Label();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.label60 = new System.Windows.Forms.Label();
             this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
@@ -179,10 +187,6 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-            this.label62 = new System.Windows.Forms.Label();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -913,6 +917,10 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.comboBox16);
+            this.tabPage4.Controls.Add(this.label64);
+            this.tabPage4.Controls.Add(this.comboBox15);
+            this.tabPage4.Controls.Add(this.label63);
             this.tabPage4.Controls.Add(this.dateTimePicker6);
             this.tabPage4.Controls.Add(this.label58);
             this.tabPage4.Controls.Add(this.dateTimePicker5);
@@ -968,6 +976,52 @@
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // comboBox16
+            // 
+            this.comboBox16.FormattingEnabled = true;
+            this.comboBox16.Items.AddRange(new object[] {
+            "Venda a prazo",
+            "Venda a vista",
+            "Cheque a prazo",
+            "Cheque a vista"});
+            this.comboBox16.Location = new System.Drawing.Point(608, 486);
+            this.comboBox16.Name = "comboBox16";
+            this.comboBox16.Size = new System.Drawing.Size(182, 24);
+            this.comboBox16.TabIndex = 50;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(447, 490);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(155, 18);
+            this.label64.TabIndex = 49;
+            this.label64.Text = "Condicao de Pagamento:";
+            // 
+            // comboBox15
+            // 
+            this.comboBox15.FormattingEnabled = true;
+            this.comboBox15.Items.AddRange(new object[] {
+            "Venda a prazo",
+            "Venda a vista",
+            "Cheque a prazo",
+            "Cheque a vista"});
+            this.comboBox15.Location = new System.Drawing.Point(608, 130);
+            this.comboBox15.Name = "comboBox15";
+            this.comboBox15.Size = new System.Drawing.Size(182, 24);
+            this.comboBox15.TabIndex = 48;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(447, 135);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(155, 18);
+            this.label63.TabIndex = 47;
+            this.label63.Text = "Condição de Pagamento:";
+            // 
             // dateTimePicker6
             // 
             this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -994,7 +1048,7 @@
             this.dateTimePicker5.Name = "dateTimePicker5";
             this.dateTimePicker5.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker5.TabIndex = 4;
-            this.dateTimePicker5.Value = new System.DateTime(2022, 9, 16, 0, 0, 0, 0);
+            this.dateTimePicker5.Value = new System.DateTime(2022, 10, 24, 0, 0, 0, 0);
             // 
             // label57
             // 
@@ -1526,6 +1580,47 @@
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
+            // comboBox14
+            // 
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Items.AddRange(new object[] {
+            "Sacos",
+            "Caixas",
+            "Quilos",
+            "Unidades"});
+            this.comboBox14.Location = new System.Drawing.Point(534, 456);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(200, 24);
+            this.comboBox14.TabIndex = 39;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(465, 461);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(63, 18);
+            this.label62.TabIndex = 38;
+            this.label62.Text = "Unidade:";
+            // 
+            // dateTimePicker8
+            // 
+            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker8.Location = new System.Drawing.Point(534, 419);
+            this.dateTimePicker8.Name = "dateTimePicker8";
+            this.dateTimePicker8.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker8.TabIndex = 37;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(446, 421);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(84, 18);
+            this.label61.TabIndex = 36;
+            this.label61.Text = "Vencimento:";
+            // 
             // comboBox13
             // 
             this.comboBox13.FormattingEnabled = true;
@@ -1556,7 +1651,7 @@
             this.dateTimePicker7.Name = "dateTimePicker7";
             this.dateTimePicker7.Size = new System.Drawing.Size(154, 21);
             this.dateTimePicker7.TabIndex = 33;
-            this.dateTimePicker7.Value = new System.DateTime(2022, 9, 16, 0, 0, 0, 0);
+            this.dateTimePicker7.Value = new System.DateTime(2022, 10, 26, 0, 0, 0, 0);
             // 
             // label59
             // 
@@ -1972,47 +2067,6 @@
             this.label36.Text = "Data:";
             this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(446, 421);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(84, 18);
-            this.label61.TabIndex = 36;
-            this.label61.Text = "Vencimento:";
-            // 
-            // dateTimePicker8
-            // 
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker8.Location = new System.Drawing.Point(534, 419);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker8.TabIndex = 37;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(465, 461);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(63, 18);
-            this.label62.TabIndex = 38;
-            this.label62.Text = "Unidade:";
-            // 
-            // comboBox14
-            // 
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Items.AddRange(new object[] {
-            "Sacos",
-            "Caixas",
-            "Quilos",
-            "Unidades"});
-            this.comboBox14.Location = new System.Drawing.Point(534, 456);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(200, 24);
-            this.comboBox14.TabIndex = 39;
-            // 
             // Frm_cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2195,5 +2249,9 @@
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.ComboBox comboBox14;
         private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.Label label64;
     }
 }

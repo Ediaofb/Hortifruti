@@ -19,7 +19,7 @@ namespace Hortifruti
             InitializeComponent();
         }
 
-        string connectionString = "Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True";
+        string connectionString = "Data Source=EDSON-PC\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True";
 
         public void login()
         {

@@ -45,12 +45,12 @@ namespace Hortifruti
         {
             Frm_relatorios rel = new Frm_relatorios();
             rel.Show();
-            Hide();
+            //Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Frm_cadastro cad = new Frm_cadastro();
+            Frm_cadastro cad = new Frm_cadastro();            
             cad.Show();
             this.Hide();
         }        

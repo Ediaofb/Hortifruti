@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -11,7 +12,7 @@ namespace Hortifruti
         SqlConnection conexao;
         SqlCommand comando;
         SqlDataReader dr;
-        string strSQL, aux, aux1;
+        string strSQL, verifica;
 
         public Frm_usuario()
         {
@@ -58,7 +59,7 @@ namespace Hortifruti
             textBox3.Visible = true;
             label4.Visible = true;
             textBox4.Visible = true;
-            button6.Visible = true;            
+            button6.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -82,6 +83,10 @@ namespace Hortifruti
             {
                 MessageBox.Show("Informe o nome para efetuar o cadastro!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            else if (textBox1.Text == "ediao") //Se o novo nome do usuário for igual a ediao
+            {
+                MessageBox.Show("Este usuário não pode ser excluído!", "Mensagem!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
             else //Se o nome e a senha estiver preenchido corretamente
             {
@@ -93,13 +98,11 @@ namespace Hortifruti
                 {
                     try
                     {
-
                         //passa a string de conexão 
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
-                        strSQL = "INSERT INTO usuario (nome, senha)" + "VALUES('" + textBox1.Text + "' ,'" + textBox2.Text + "')";
+                        conexao = new SqlConnection("Data Source=EDSON-PC\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        strSQL = "DELETE FROM Usuario WHERE Nome = '" +textBox1.Text + "'";
                         // Preparando a conexão
                         comando = new SqlCommand(strSQL, conexao);
-
 
                         conexao.Open();
 
@@ -108,7 +111,7 @@ namespace Hortifruti
                         textBox1.Text = "";
                         textBox2.Text = "";
 
-                        MessageBox.Show("Usuário cadastrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Usuário excluído com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     catch (Exception erro)
                     {
@@ -131,6 +134,70 @@ namespace Hortifruti
             this.Hide();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "ediao")
+                MessageBox.Show("Este usuário não pode ser alterado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            else if (textBox3.Text == "" || textBox4.Text == "") //Se o novo nome do usuário ou a senha a serem editados não estiverem vazios
+            {
+                MessageBox.Show("Preencha o novo nome e a nova senha para editar o usuário!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                //botão dialog pergunta: "Deseja realmente editar este produto?"
+                DialogResult confirm = MessageBox.Show("Deseja realmente editar este usuário?", "Salvar Arquivo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+                //Em caso afirmativo, edita
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    try
+                    {
+                        //passa a string de conexão
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+
+                        strSQL = "UPDATE Usuario SET nome = @nome, senha = @senha WHERE nome = @nome_at";
+
+                        //preparando a conexão
+                        comando = new SqlCommand(strSQL, conexao);
+
+                        comando.Parameters.AddWithValue("@nome", textBox3.Text);
+                        comando.Parameters.AddWithValue("@senha", textBox4.Text);
+                        comando.Parameters.AddWithValue("@nome_at", textBox1.Text);
+                        comando.CommandType = CommandType.Text;
+                        conexao.Open();
+
+                        dr = comando.ExecuteReader();
+
+                        //MessageBox.Show("Deu certo!");
+
+                        comando = null;
+
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+
+                        MessageBox.Show("Usuário editado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                        comando = null;
+                        conexao.Close();
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show(erro.Message);
+                    }
+                    finally
+                    {
+                        conexao.Close();
+                        conexao = null;
+                        comando = null;
+                    }
+                }
+            }
+        }
+        
+
         private void button5_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "") //Se o nome do ou senha não estiver preenchido
@@ -142,22 +209,37 @@ namespace Hortifruti
             {
                 try
                 {
-
                     //passa a string de conexão 
-                    conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
-                    strSQL = "INSERT INTO usuario (nome, senha)" + "VALUES('" + textBox1.Text + "' ,'" + textBox2.Text + "')";
-                    // Preparando a conexão
-                    comando = new SqlCommand(strSQL, conexao);
+                    conexao = new SqlConnection("Data Source=EDSON-PC\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                    verifica = "SELECT Nome from Usuario Where Nome = '" + textBox1.Text + "'"; //Seleciona o nome do usuário escolhido para verificar se ele já existe 
 
+                    SqlCommand command = new SqlCommand(verifica, conexao);
 
                     conexao.Open();
 
-                    dr = comando.ExecuteReader();
+                    var result = comando.ExecuteScalar();
 
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    
-                    MessageBox.Show("Usuário cadastrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    conexao.Close();
+
+                    if(result != null) // Se o usuário desejado ainda não foi cadastrado
+                    {
+                        MessageBox.Show("Este usuário já está cadastrado! Caso seja necessário, edite-o!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        strSQL = "INSERT INTO Usuario (nome, senha) VALUES('" + textBox1.Text + "' , '" + textBox2.Text + "')";
+                        //Preparando a conexão
+                        comando = new SqlCommand(strSQL, conexao);
+
+                        conexao.Open();
+
+                        dr = comando.ExecuteReader();
+
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+
+                        MessageBox.Show("Usuário cadastrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }                    
                 }
                 catch (Exception erro)
                 {

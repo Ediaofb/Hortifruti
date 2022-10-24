@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -56,10 +56,10 @@
     <ManifestKeyFile>Hortifruti_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>false</GenerateManifests>
+    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -217,15 +217,13 @@
     <Compile Include="Frm_venda.Designer.cs">
       <DependentUpon>Frm_venda.cs</DependentUpon>
     </Compile>
+    <Compile Include="hortifruti_dbDataSet.cs">
+      <DependentUpon>hortifruti_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="hortifruti_dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>hortifruti_dbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="hortifruti_dbDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>hortifruti_dbDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="hortifruti_dbDataSet2.cs">
       <DependentUpon>hortifruti_dbDataSet2.xsd</DependentUpon>
@@ -252,6 +250,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>hortifruti_dbDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hortifruti_dbDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hortifruti_dbDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hortifruti_dbDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hortifruti_dbDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hortifruti_dbDataSet8.cs">
+      <DependentUpon>hortifruti_dbDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hortifruti_dbDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hortifruti_dbDataSet8.xsd</DependentUpon>
     </Compile>
     <Compile Include="MetodosUteis.cs" />
     <Compile Include="Program.cs" />
@@ -367,17 +383,6 @@
     <None Include="hortifruti_dbDataSet.xss">
       <DependentUpon>hortifruti_dbDataSet.xsd</DependentUpon>
     </None>
-    <None Include="hortifruti_dbDataSet1.xsc">
-      <DependentUpon>hortifruti_dbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="hortifruti_dbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>hortifruti_dbDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="hortifruti_dbDataSet1.xss">
-      <DependentUpon>hortifruti_dbDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="hortifruti_dbDataSet2.xsc">
       <DependentUpon>hortifruti_dbDataSet2.xsd</DependentUpon>
     </None>
@@ -421,6 +426,39 @@
     </None>
     <None Include="hortifruti_dbDataSet5.xss">
       <DependentUpon>hortifruti_dbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="hortifruti_dbDataSet6.xsc">
+      <DependentUpon>hortifruti_dbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="hortifruti_dbDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hortifruti_dbDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hortifruti_dbDataSet6.xss">
+      <DependentUpon>hortifruti_dbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="hortifruti_dbDataSet7.xsc">
+      <DependentUpon>hortifruti_dbDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="hortifruti_dbDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hortifruti_dbDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hortifruti_dbDataSet7.xss">
+      <DependentUpon>hortifruti_dbDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="hortifruti_dbDataSet8.xsc">
+      <DependentUpon>hortifruti_dbDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="hortifruti_dbDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hortifruti_dbDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hortifruti_dbDataSet8.xss">
+      <DependentUpon>hortifruti_dbDataSet8.xsd</DependentUpon>
     </None>
     <None Include="Hortifruti_TemporaryKey.pfx" />
     <None Include="packages.config" />
