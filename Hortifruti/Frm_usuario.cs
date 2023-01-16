@@ -95,7 +95,7 @@ namespace Hortifruti
                     {
 
                         //passa a string de conexão 
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                         strSQL = "INSERT INTO usuario (nome, senha)" + "VALUES('" + textBox1.Text + "' ,'" + textBox2.Text + "')";
                         // Preparando a conexão
                         comando = new SqlCommand(strSQL, conexao);
@@ -144,7 +144,7 @@ namespace Hortifruti
                 {
 
                     //passa a string de conexão 
-                    conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                    conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                     strSQL = "INSERT INTO usuario (nome, senha)" + "VALUES('" + textBox1.Text + "' ,'" + textBox2.Text + "')";
                     // Preparando a conexão
                     comando = new SqlCommand(strSQL, conexao);

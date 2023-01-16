@@ -31,27 +31,25 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.produtorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hortifruti_dbDataSet = new Hortifruti.hortifruti_dbDataSet();
+            this.hortifruti_dbDataSet6 = new Hortifruti.hortifruti_dbDataSet6();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.produtorTableAdapter = new Hortifruti.hortifruti_dbDataSetTableAdapters.ProdutorTableAdapter();
-            this.hortifrutidbDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_produtor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.produtorTableAdapter = new Hortifruti.hortifruti_dbDataSet6TableAdapters.ProdutorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.produtorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hortifruti_dbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hortifrutidbDataSet5BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hortifruti_dbDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // produtorBindingSource
             // 
             this.produtorBindingSource.DataMember = "Produtor";
-            this.produtorBindingSource.DataSource = this.hortifruti_dbDataSet;
+            this.produtorBindingSource.DataSource = this.hortifruti_dbDataSet6;
             // 
-            // hortifruti_dbDataSet
+            // hortifruti_dbDataSet6
             // 
-            this.hortifruti_dbDataSet.DataSetName = "hortifruti_dbDataSet";
-            this.hortifruti_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.hortifruti_dbDataSet6.DataSetName = "hortifruti_dbDataSet6";
+            this.hortifruti_dbDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -65,40 +63,40 @@
             this.reportViewer1.Location = new System.Drawing.Point(12, 99);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1049, 508);
+            this.reportViewer1.Size = new System.Drawing.Size(1049, 496);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // produtorTableAdapter
-            // 
-            this.produtorTableAdapter.ClearBeforeFill = true;
             // 
             // tb_produtor
             // 
-            this.tb_produtor.Location = new System.Drawing.Point(264, 23);
+            this.tb_produtor.Location = new System.Drawing.Point(262, 23);
             this.tb_produtor.Name = "tb_produtor";
-            this.tb_produtor.Size = new System.Drawing.Size(486, 20);
+            this.tb_produtor.Size = new System.Drawing.Size(488, 20);
             this.tb_produtor.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(194, 22);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(189, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 18);
+            this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Produtor:";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(776, 17);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(768, 17);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
+            this.button1.Size = new System.Drawing.Size(88, 31);
             this.button1.TabIndex = 3;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // produtorTableAdapter
+            // 
+            this.produtorTableAdapter.ClearBeforeFill = true;
             // 
             // FrmRelProdutor
             // 
@@ -110,11 +108,11 @@
             this.Controls.Add(this.tb_produtor);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmRelProdutor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório de Produtores";
             this.Load += new System.EventHandler(this.FrmrRelProdutorcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.produtorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hortifruti_dbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hortifrutidbDataSet5BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hortifruti_dbDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,12 +121,11 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private hortifruti_dbDataSet hortifruti_dbDataSet;
-        private System.Windows.Forms.BindingSource produtorBindingSource;
-        private hortifruti_dbDataSetTableAdapters.ProdutorTableAdapter produtorTableAdapter;
-        private System.Windows.Forms.BindingSource hortifrutidbDataSet5BindingSource;
         private System.Windows.Forms.TextBox tb_produtor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private hortifruti_dbDataSet6 hortifruti_dbDataSet6;
+        private System.Windows.Forms.BindingSource produtorBindingSource;
+        private hortifruti_dbDataSet6TableAdapters.ProdutorTableAdapter produtorTableAdapter;
     }
 }

@@ -51,7 +51,7 @@ namespace Hortifruti.Relatorios
            }*/
 
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet4.Vendas'. Você pode movê-la ou removê-la conforme necessário.
-            this.vendasTableAdapter1.Fill(this.hortifruti_dbDataSet4.Vendas,"","01-01-2000","01-01-2100");
+            this.vendasTableAdapter.Fill(this.hortifruti_dbDataSet6.Vendas,"","01-01-2000","01-01-2100");
             this.reportViewer1.RefreshReport();
 
         }
@@ -69,7 +69,7 @@ namespace Hortifruti.Relatorios
         private void btn_consult_rel_vendas_Click(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet4.Vendas'. Você pode movê-la ou removê-la conforme necessário.
-            this.vendasTableAdapter1.Fill(this.hortifruti_dbDataSet4.Vendas, tb_clientes.Text, dateTimePicker1.Value.ToString(), dateTimePicker2.Value.ToString());
+            this.vendasTableAdapter.Fill(this.hortifruti_dbDataSet6.Vendas, tb_clientes.Text, dateTimePicker1.Value.ToString(), dateTimePicker2.Value.ToString());
             this.reportViewer1.RefreshReport();
 
 

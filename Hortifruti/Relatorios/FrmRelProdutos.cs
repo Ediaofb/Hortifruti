@@ -18,9 +18,9 @@ namespace Hortifruti.Relatorios
         }
 
         private void FrmRelProdutos_Load(object sender, EventArgs e)
-        {
+        {            
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet5.Produto'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtoTableAdapter2.Fill(this.hortifruti_dbDataSet5.Produto, "");           
+            this.produtoTableAdapter.Fill(this.hortifruti_dbDataSet6.Produto, "");           
             this.reportViewer1.RefreshReport();
         }
 
@@ -31,8 +31,28 @@ namespace Hortifruti.Relatorios
 
         private void btn_consult_rel_vendas_Click(object sender, EventArgs e)
         {
-            this.produtoTableAdapter2.Fill(this.hortifruti_dbDataSet5.Produto, tb_produtos.Text);
+            this.produtoTableAdapter.Fill(this.hortifruti_dbDataSet6.Produto, tb_produtos.Text);
             this.reportViewer1.RefreshReport();
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void produtoBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void produtoBindingSource2_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportViewer1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Hortifruti
 
         public void test()
         {
-            string config = "Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True";
+            string config = "Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True";
             string query = String.Format("SELECT * FROM PRODUTOR", "bd");
 
             SqlConnection conexao = new SqlConnection(config);
@@ -31,11 +31,8 @@ namespace Hortifruti
 
         private void Frm_fornecedor_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet3.Produtor'. Você pode movê-la ou removê-la conforme necessário.
-           //this.produtorTableAdapter1.Fill(this.hortifruti_dbDataSet3.Produtor);
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet2.Produtor'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet2.Produtor);
-
+            this.produtorTableAdapter.Fill(hortifruti_dbDataSet6.Produtor, "");
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -54,37 +51,14 @@ namespace Hortifruti
             cons.Show();
             this.Close();
         }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.produtorTableAdapter.FillBy(this.hortifruti_dbDataSet2.Produtor);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByToolStripButton1_Click(object sender, EventArgs e)
-        {
-try {
-    this.produtorTableAdapter1.FillBy(this.hortifruti_dbDataSet3.Produtor);
-}
-catch (System.Exception ex) {
-    System.Windows.Forms.MessageBox.Show(ex.Message);
-}
-
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             //define a string de conexao com provedor caminho e nome do banco de dados
-            string config = "Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True";
+            string config = "Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True";
             //define a instrução SQL
-            string query = /*String.Format(*/"SELECT * FROM PRODUTOR WHERE NOME LIKE %"+textBox1.Text+"%"/*, "bd")*/;
+            string query = String.Format("SELECT * FROM PRODUTOR WHERE Nome LIKE '%"+textBox1.Text+"%' ORDER BY Nome", "bd");
             
             //cria a conexão com o banco de dados
             SqlConnection conexao = new SqlConnection(config);            

@@ -19,8 +19,8 @@ namespace Hortifruti.Relatorios
 
         private void FrmRerlCompras_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet4.Compra'. Você pode movê-la ou removê-la conforme necessário.
-            this.compraTableAdapter1.Fill(this.hortifruti_dbDataSet4.Compra, "", "", "01-01-200", "12-08-2022");
+            // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet7.Compra'. Você pode movê-la ou removê-la conforme necessário.
+            this.compraTableAdapter.Fill(this.hortifruti_dbDataSet7.Compra, "", "", "01-01-2000", "01-01-2100");            
             this.reportViewer1.RefreshReport();
         }
 
@@ -32,7 +32,7 @@ namespace Hortifruti.Relatorios
         private void button1_Click(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet4.Compra'. Você pode movê-la ou removê-la conforme necessário.
-            this.compraTableAdapter1.Fill(this.hortifruti_dbDataSet4.Compra, textBox1.Text, textBox2.Text, dateTimePicker1.Text, dateTimePicker2.Text);
+            this.compraTableAdapter.Fill(this.hortifruti_dbDataSet7.Compra, textBox1.Text, textBox2.Text, dateTimePicker1.Text, dateTimePicker2.Text);
             this.reportViewer1.RefreshReport();
         }
     }

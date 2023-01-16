@@ -12,15 +12,15 @@ namespace Hortifruti.Relatorios
 
         private void FrmrRelProdutorcs_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet.Produtor'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet.Produtor, "");
+            // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet6.Produtor'. Você pode movê-la ou removê-la conforme necessário.
+            this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet6.Produtor, "");
             this.reportViewer1.RefreshReport();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet.Produtor'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet.Produtor, tb_produtor.Text);
+            this.produtorTableAdapter.Fill(this.hortifruti_dbDataSet6.Produtor, tb_produtor.Text);
             this.reportViewer1.RefreshReport();
         }
     }

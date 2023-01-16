@@ -40,7 +40,7 @@ namespace Hortifruti
                 {
                     if (comboBox5.SelectedIndex != 20)//Se o produto selecionado é diferente de "Outro..."
                     {
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                         verifica = "SELECT Nome from Produto Where Nome = '" + comboBox5.Text + "'"; //Seleciona o nome do produto selceionado para verificar se ele já existe
 
                         SqlCommand command = new SqlCommand(verifica, conexao);
@@ -57,7 +57,7 @@ namespace Hortifruti
                         else //Se o produto desejado ainda não foi cadastrado
                         {
                             //passa a string de conexão 
-                            conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                             strSQL = "INSERT INTO produto (nome, preço)" + "VALUES('" + comboBox5.Text + "' , '" + textBox3.Text + "')";
                             // Preparando a conexão
                             comando = new SqlCommand(strSQL, conexao);
@@ -75,7 +75,7 @@ namespace Hortifruti
                     }
                     else//Se o produto selecionado é igual a "Outro..." (Não está na lista do ComboBox, é "personalizado")
                     {
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                         verifica = "SELECT Nome from Produto Where Nome = '" + textBox1.Text + "'";
 
                         SqlCommand command = new SqlCommand(verifica, conexao);
@@ -93,7 +93,7 @@ namespace Hortifruti
                         else
                         {
                             //passa a string de conexão 
-                            conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                             strSQL = "INSERT INTO produto (nome, preço)" + "VALUES('" + textBox1.Text + "' , '" + textBox3.Text + "')";
                             // Preparando a conexão
                             comando = new SqlCommand(strSQL, conexao);
@@ -164,11 +164,14 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                         aux = "SELECT idProduto from produto WHERE nome = @nome";
                         comando = new SqlCommand(aux, conexao);
-                        comando.Parameters.AddWithValue("@nome", comboBox5.Text);
+                        if (comboBox5.SelectedIndex != 20)
+                            comando.Parameters.AddWithValue("@nome", comboBox5.Text); //Se o produto selecionado for diferente de "outro".
+                        else
+                            comando.Parameters.AddWithValue("@nome", textBox1.Text);
                         comando.CommandType = CommandType.Text;
                         conexao.Open();
 
@@ -194,6 +197,10 @@ namespace Hortifruti
                             dr = comando.ExecuteReader();
 
                             MessageBox.Show("Produto excluído com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            comboBox5.Text = "";
+                            textBox1.Text = "";
+                            textBox3.Text = "";
 
                             dr.Close();
                         }
@@ -250,7 +257,7 @@ namespace Hortifruti
             {
                 try
                 {
-                    conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                    conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                     verifica = "SELECT Nome from Cliente Where Nome = '" + textBox_nome_cliente.Text + "'"; //Seleciona o nome do produto selceionado para verificar se ele já existe
 
                     SqlCommand command = new SqlCommand(verifica, conexao);
@@ -267,7 +274,7 @@ namespace Hortifruti
                     else //Se o produto desejado ainda não foi cadastrado
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                         strSQL = "INSERT INTO cliente (nome, endereco, telefone, e_mail)" + "VALUES('" + textBox_nome_cliente.Text + "' ,'" + textBox_endereco_cliente.Text + "' , '" + textBox_tel_cliente.Text + "' , '" + textBox_email_cliente.Text + "')";
                         // Preparando a conexão
                         comando = new SqlCommand(strSQL, conexao);
@@ -331,7 +338,7 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                         aux = "SELECT id_cliente from Cliente WHERE nome = @nome";
                         comando = new SqlCommand(aux, conexao);
@@ -420,7 +427,7 @@ namespace Hortifruti
                     {
                         try
                         {
-                            conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                             aux = "SELECT Id_cliente from CLIENTE WHERE Nome = @nome";
                             comando = new SqlCommand(aux, conexao);
@@ -504,7 +511,7 @@ namespace Hortifruti
             {
                 try
                 {
-                    conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                    conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                     verifica = "SELECT Nome from Produtor Where Nome = '" + textBox_nome_fornecedor.Text + "'"; //Seleciona o nome do produto selceionado para verificar se ele já existe
 
                     SqlCommand command = new SqlCommand(verifica, conexao);
@@ -521,7 +528,7 @@ namespace Hortifruti
                     else //Se o produto desejado ainda não foi cadastrado
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
                         strSQL = "INSERT INTO produtor (nome, endereco, telefone, e_mail)" + "VALUES('" + textBox_nome_fornecedor.Text + "' ,'" + textBox_ender_fornecedor.Text + "' , '" + textBox_telefone_fornecedor.Text + "' , '" + textBox_email_fornecedor.Text + "')";
                         // Preparando a conexão
                         comando = new SqlCommand(strSQL, conexao);
@@ -594,7 +601,7 @@ namespace Hortifruti
                         try
                         {
                             //passa a string de conexão
-                            conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                             aux = "SELECT Id_produtor from produtor WHERE nome = @nome"; //obtendo o id do produto
                             comando = new SqlCommand(aux, conexao);
@@ -701,8 +708,8 @@ namespace Hortifruti
                 {
 
                     //passa a string de conexão
-                    conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
-                    strSQL = "INSERT INTO VENDAS (NomeProduto, Data, Quantidade, Unidade, Preco_unitario, Preco_total, Cliente, Pago, Data_Vencimento) VALUES(@nomeproduto, @data, @quantidade, @unidade, @precounitario, @precototal, @cliente, @pago, @data_venc)";
+                    conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                    strSQL = "INSERT INTO VENDAS (NomeProduto, Data, Quantidade, Unidade, Preco_unitario, Preco_total, Cliente, Pagamento, Data_Vencimento, Condicao) VALUES(@nomeproduto, @data, @quantidade, @unidade, @precounitario, @precototal, @cliente, @pagamento, @data_venc, @condicao)";
 
 
                     // Preparando a conexão
@@ -718,10 +725,11 @@ namespace Hortifruti
                     comando.Parameters.AddWithValue("@precototal", textBox_preco_tot.Text);
                     comando.Parameters.AddWithValue("@cliente", textBox_cliente.Text);
                     if(comboBox1.SelectedIndex == 0)//Se o pagamento não foi realizado
-                        comando.Parameters.AddWithValue("@pago", 0);
+                        comando.Parameters.AddWithValue("@pagamento", 'N');
                     else //Se o pagamento foi realizado
-                        comando.Parameters.AddWithValue("@pago", 1);
+                        comando.Parameters.AddWithValue("@pagamento", 'S');
                     comando.Parameters.AddWithValue("@data_venc", dateTimePicker5.Value);
+                    comando.Parameters.AddWithValue("@condicao", comboBox15.Text);
 
                         conexao.Open();
 
@@ -733,6 +741,7 @@ namespace Hortifruti
                     textBox_preco_tot.Text = "";
                     textBox_cliente.Text = "";
                     comboBox1.Text = "";
+                    textBox4.Text = "";
 
                     MessageBox.Show("Venda cadastrada com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
@@ -777,7 +786,7 @@ namespace Hortifruti
                         try
                         {
                             //passa a string de conexão
-                            conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                             aux = "SELECT Id_vendas from Vendas WHERE NomeProduto = @nome AND Cliente = @cliente AND Data = @data"; //obtendo o id do produto
                             comando = new SqlCommand(aux, conexao);
@@ -802,7 +811,7 @@ namespace Hortifruti
                                 int aux_int;
                                 aux_int = Int32.Parse(aux1);
 
-                                strSQL = "UPDATE Vendas SET NomeProduto = @nomeproduto, Data = @data, Data_Vencimento = @data_venc, Quantidade = @quantidade, Unidade = @unidade, Preco_unitario = @preco_unitario, Preco_total = @preco_total, Cliente = @cliente, Pago = @pago WHERE Id_vendas = @id";
+                                strSQL = "UPDATE Vendas SET NomeProduto = @nomeproduto, Data = @data, Data_Vencimento = @data_venc, Quantidade = @quantidade, Unidade = @unidade, Preco_unitario = @preco_unitario, Preco_total = @preco_total, Cliente = @cliente, Pagamento = @pagamento, condicao = @condicao WHERE Id_vendas = @id";
                                 // Preparando a conexão
                                 comando2 = new SqlCommand(strSQL, conexao);
                                 if (comboBox7.SelectedIndex != 20)//Se o produto selecionado for diferente de 'outro'
@@ -817,10 +826,10 @@ namespace Hortifruti
                                 comando2.Parameters.AddWithValue("@preco_total", textBox_preco_tot_novo.Text);
                                 comando2.Parameters.AddWithValue("@cliente", textBox_cliente_novo.Text);
                                 if (comboBox4.SelectedIndex == 0)//Se o pagamento não foi realizado
-                                    comando2.Parameters.AddWithValue("@pago", 0);
+                                    comando2.Parameters.AddWithValue("@pagamento", 'N');
                                 else//Se o pagamento foi realizado
-                                    comando2.Parameters.AddWithValue("@pago", 1);                                                                     
-
+                                    comando2.Parameters.AddWithValue("@pagamento", 'S');
+                                comando2.Parameters.AddWithValue("@condicao", comboBox16.Text);
                                 comando2.Parameters.AddWithValue("@id", aux1);
                                 comando2.CommandType = CommandType.Text;
                                 conexao.Open();
@@ -885,6 +894,7 @@ namespace Hortifruti
             {
                 comboBox7.Enabled = true;
                 dateTimePicker2.Enabled = true;
+                dateTimePicker6.Enabled = true;
                 textBox_quantidade_novo.Enabled = true;
                 textBox_preco_un_novo.Enabled = true;
                 textBox_preco_tot_novo.Enabled = true;
@@ -916,9 +926,9 @@ namespace Hortifruti
 
         private void btn_excluir_venda_Click(object sender, EventArgs e) //Excluir venda
         {
-            if (comboBox6.Text == "" || dateTimePicker1.Text == "" || textBox_cliente.Text == "") //Se o produto ou a data ou o nome do cliente não estiver preenchido
+            if (comboBox6.Text == "" || dateTimePicker1.Text == "" || textBox_cliente.Text == "" || textBox_quantidade.Text == "") //Se o produto ou a data ou o nome do cliente ou a quantidade não estiver preenchido
             {
-                MessageBox.Show("Informe o Produto, a data e o nome do cliente para efetuar a exclusão!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o Produto, a data, o nome do cliente e a quantidade para efetuar a exclusão!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             else //Se o nome do cliente estiver preenchido corretamente
@@ -934,7 +944,7 @@ namespace Hortifruti
                         //passa a string de conexão
                         conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
-                        aux = "SELECT Id_Vendas FROM Vendas WHERE Cliente = @cliente AND NomeProduto = @nomeproduto AND Data = @data AND Preco_total = @precototal";
+                        aux = "SELECT Id_Vendas FROM Vendas WHERE Cliente = @cliente AND NomeProduto = @nomeproduto AND Data = @data AND Quantidade = @quantidade";
                         comando = new SqlCommand(aux, conexao);
                         comando.Parameters.AddWithValue("@cliente", textBox_cliente.Text);
                         if (comboBox6.SelectedIndex != 20)//Se o produto selecionado for diferente de 'outro'
@@ -942,7 +952,7 @@ namespace Hortifruti
                         else//Se o produto selecionado for igual a 'outro'
                             comando.Parameters.AddWithValue("@nomeproduto", textBox4.Text);
                         comando.Parameters.AddWithValue("@data", dateTimePicker1.Text);
-                        comando.Parameters.AddWithValue("@precototal", textBox_preco_tot.Text);
+                        comando.Parameters.AddWithValue("@quantidade", textBox_quantidade.Text);
                         conexao.Open();
 
                         dr = comando.ExecuteReader();
@@ -999,7 +1009,7 @@ namespace Hortifruti
 
         private void button1_Click_1(object sender, EventArgs e) // Cadastrando a compra
         {
-            if (textBox7.Text == "" || textBox8.Text == "" || textBox12.Text == "")
+            if (comboBox11.Text == "" || textBox8.Text == "" || textBox12.Text == "")
             {
                 MessageBox.Show("Preencha os dados corretamente para efetuar o cadastro!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -1008,8 +1018,8 @@ namespace Hortifruti
                 try
                 {
                         //passa a string de conexão 
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
-                        strSQL = "INSERT INTO compra (data, produto, nome_produtor, quantidade, Valor_unitario, Valor_total, Pago, data_vencimento, Unidade)" + "VALUES(@data, @produto, @produtor, @quantidade, @valor_unit, @valor_tot, @pagamento, @data_venc, @unidade)";
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        strSQL = "INSERT INTO compra (data, produto, nome_produtor, quantidade, Valor_unitario, Valor_total, Pagamento, data_vencimento, Unidade)" + "VALUES(@data, @produto, @produtor, @quantidade, @valor_unit, @valor_tot, @pagamento, @data_venc, @unidade)";
                         // Preparando a conexão
                         comando = new SqlCommand(strSQL, conexao);
                         comando.Parameters.AddWithValue("@data", dateTimePicker3.Value);
@@ -1022,9 +1032,9 @@ namespace Hortifruti
                         comando.Parameters.AddWithValue("@valor_unit", textBox11.Text);
                         comando.Parameters.AddWithValue("@valor_tot", textBox12.Text);
                         if(comboBox2.SelectedIndex == 0)//Se o pagamento não foi realizado
-                            comando.Parameters.AddWithValue("@pagamento", 0);
+                            comando.Parameters.AddWithValue("@pagamento", 'N');
                         else //Se o pagamento foi realizado
-                            comando.Parameters.AddWithValue("@pagamento", 1);
+                            comando.Parameters.AddWithValue("@pagamento", 'S');
                         comando.Parameters.AddWithValue("@data_venc", dateTimePicker7.Value);
                         comando.Parameters.AddWithValue("@unidade", comboBox13.Text);
 
@@ -1032,7 +1042,15 @@ namespace Hortifruti
 
                         dr = comando.ExecuteReader();
 
-                        MessageBox.Show("Compra cadastrada com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                    textBox10.Text = "";
+                    comboBox11.Text = "";
+                    comboBox13.Text = "";
+                    textBox11.Text = "";
+                    textBox12.Text = "";
+
+                    MessageBox.Show("Compra cadastrada com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             
                 }
                 catch (Exception erro)
@@ -1057,9 +1075,9 @@ namespace Hortifruti
 
         private void button3_Click(object sender, EventArgs e) //Excluir compra
         {
-            if (textBox7.Text == "" || dateTimePicker3.Text == "" || textBox8.Text == "") //Se o produto ou a data ou o nome do produtor não estiver preenchido
+            if (comboBox11.Text == "" || dateTimePicker3.Text == "" || textBox8.Text == "" || textBox10.Text == "") //Se o produto ou a quantidade ou a data ou o nome do produtor não estiver preenchido
             {
-                MessageBox.Show("Informe o Produto, a data e o nome do produtor para efetuar a exclusão!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o Produto, a quantidade, a data e o nome do produtor para efetuar a exclusão!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             else //Se o produto, data e nome do produtor estiver preenchido corretamente
@@ -1073,9 +1091,9 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
-                        aux = "SELECT Id_Compra FROM Compra Where Nome_Produtor = @nomeprodutor AND Produto = @produto AND Data = @data";
+                        aux = "SELECT Id_Compra FROM Compra Where Nome_Produtor = @nomeprodutor AND Produto = @produto AND Data = @data AND Quantidade = @quantidade";
                         comando = new SqlCommand(aux, conexao);
                         comando.Parameters.AddWithValue("@nomeprodutor", textBox8.Text);
                         if (comboBox11.SelectedIndex != 20)//Se o produto selecionado for diferente de 'outro'
@@ -1083,6 +1101,7 @@ namespace Hortifruti
                         else//Se o produto selecionado for igual a 'outro'
                             comando.Parameters.AddWithValue("@produto", textBox7.Text);
                         comando.Parameters.AddWithValue("@data", dateTimePicker3.Text);
+                        comando.Parameters.AddWithValue("@quantidade", textBox10.Text);
                         conexao.Open();
 
                         dr = comando.ExecuteReader();
@@ -1104,6 +1123,14 @@ namespace Hortifruti
                             conexao.Open();
 
                             dr = comando2.ExecuteReader();
+
+                            textBox7.Text = "";
+                            textBox8.Text = "";
+                            textBox10.Text = "";
+                            comboBox11.Text = "";
+                            comboBox13.Text = "";
+                            textBox11.Text = "";
+                            textBox12.Text = "";
 
                             MessageBox.Show("Compra excluída com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -1147,7 +1174,7 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                         aux = "DELETE FROM Produtor WHERE Nome = @nome";
                         comando = new SqlCommand(aux, conexao);
@@ -1190,7 +1217,9 @@ namespace Hortifruti
             else
             {
                 dateTimePicker4.Enabled = true;
+                dateTimePicker8.Enabled = true;
                 comboBox12.Enabled = true;
+                comboBox14.Enabled = true;
                 textBox15.Enabled = true;
                 textBox16.Enabled = true;
                 textBox17.Enabled = true;
@@ -1371,6 +1400,546 @@ namespace Hortifruti
 
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_novo_email_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_novo_tel_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_novo_ender_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_novo_nome_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_tel_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_endereco_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_nome_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_novo_email_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_email_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_novo_tel_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_novo_ender_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_novo_nome_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_telefone_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_ender_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_nome_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker6_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label58_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker5_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label57_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label54_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label53_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_cliente_novo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_preco_tot_novo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_preco_un_novo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_quantidade_novo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_preco_un_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_quantidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox14_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label62_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker8_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label61_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label60_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker7_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox11.SelectedIndex == 20)
+            {
+                label56.Visible = true;
+                textBox9.Visible = true;
+                textBox9.Enabled = true;
+            }
+            else
+            {
+                label56.Visible = false;
+                textBox9.Visible = false;
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label55_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label49_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label47_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label45_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label43_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label42_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label63_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox15_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBox6_Leave(object sender, EventArgs e)
         {
             
@@ -1403,7 +1972,7 @@ namespace Hortifruti
                         try
                         {
                             //passa a string de conexão
-                            conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                             aux = "SELECT Id_compra from Compra WHERE Produto = @produto AND Nome_Produtor = @nome_produtor AND data = @data"; //obtendo o id da venda
                             comando = new SqlCommand(aux, conexao);
@@ -1431,7 +2000,7 @@ namespace Hortifruti
                                 /*int valor = Convert.ToInt32(comboBox3.SelectedValue);
                                 MessageBox.Show("O valor recebido do pagamento editado é: "+ valor, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);*/
 
-                                strSQL = "UPDATE Compra SET Produto = @produto, Data = @data, Data_Vencimento = @data_venc, Quantidade = @quantidade, Unidade = @unidade, Valor_unitario = @valor_unitario, Valor_total = @valor_total, Nome_produtor = @nome_produtor, Pago = @pago WHERE Id_compra = @id";
+                                strSQL = "UPDATE Compra SET Produto = @produto, Data = @data, Data_Vencimento = @data_venc, Quantidade = @quantidade, Unidade = @unidade, Valor_unitario = @valor_unitario, Valor_total = @valor_total, Nome_produtor = @nome_produtor, Pagamento = @pagamento WHERE Id_compra = @id";
                                 // Preparando a conexão
                                 comando2 = new SqlCommand(strSQL, conexao);
                                 if (comboBox12.SelectedIndex != 20)//Se o novo produto selecionado for diferente de 'outro'
@@ -1447,9 +2016,9 @@ namespace Hortifruti
                                 comando2.Parameters.AddWithValue("@nome_produtor", textBox15.Text);                              
                                 
                                 if (comboBox3.SelectedIndex == 0)
-                                    comando2.Parameters.AddWithValue("@pago", 0);
+                                    comando2.Parameters.AddWithValue("@pagamento", 'N');
                                 else
-                                    comando2.Parameters.AddWithValue("@pago", 1);
+                                    comando2.Parameters.AddWithValue("@pagamento", 'S');
                                 comando2.Parameters.AddWithValue("@id", aux_int);
                                 comando2.CommandType = CommandType.Text;
                                 conexao.Open();
@@ -1522,7 +2091,7 @@ namespace Hortifruti
                             {
                                 //passa a string de conexão
 
-                                conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                                conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                                 aux = "SELECT idProduto from Produto WHERE Nome = @nome"; //obtendo o id do produto
                                 comando = new SqlCommand(aux, conexao);
@@ -1566,8 +2135,10 @@ namespace Hortifruti
                                     comando = null;
 
                                     comboBox5.Text = "";
+                                    textBox1.Text = "";
                                     textBox3.Text = "";
-                                    comboBox6.Text = "";
+                                    comboBox8.Text = "";
+                                    textBox2.Text = "";
                                     textBox6.Text = "";
 
                                     MessageBox.Show("Produto editado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1597,7 +2168,7 @@ namespace Hortifruti
                             {
                                 //passa a string de conexão
 
-                                conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
+                                conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
 
                                 aux = "SELECT idProduto from Produto WHERE Nome = @nome"; //obtendo o id do produto
                                 comando = new SqlCommand(aux, conexao);

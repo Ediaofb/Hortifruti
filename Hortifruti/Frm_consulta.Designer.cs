@@ -42,7 +42,7 @@
             // 
             // btn_produto
             // 
-            this.btn_produto.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_produto.Location = new System.Drawing.Point(62, 311);
             this.btn_produto.Name = "btn_produto";
             this.btn_produto.Size = new System.Drawing.Size(75, 32);
@@ -53,7 +53,7 @@
             // 
             // btn_cliente
             // 
-            this.btn_cliente.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cliente.Location = new System.Drawing.Point(206, 311);
             this.btn_cliente.Name = "btn_cliente";
             this.btn_cliente.Size = new System.Drawing.Size(75, 32);
@@ -64,10 +64,10 @@
             // 
             // btn_fornecedor
             // 
-            this.btn_fornecedor.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_fornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_fornecedor.Location = new System.Drawing.Point(357, 311);
             this.btn_fornecedor.Name = "btn_fornecedor";
-            this.btn_fornecedor.Size = new System.Drawing.Size(80, 32);
+            this.btn_fornecedor.Size = new System.Drawing.Size(96, 32);
             this.btn_fornecedor.TabIndex = 2;
             this.btn_fornecedor.Text = "Fornecedor";
             this.btn_fornecedor.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@
             // 
             // btn_venda
             // 
-            this.btn_venda.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_venda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_venda.Location = new System.Drawing.Point(509, 311);
             this.btn_venda.Name = "btn_venda";
             this.btn_venda.Size = new System.Drawing.Size(75, 32);
@@ -86,7 +86,7 @@
             // 
             // btn_voltar
             // 
-            this.btn_voltar.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.Location = new System.Drawing.Point(245, 386);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(75, 32);
@@ -97,7 +97,7 @@
             // 
             // btn_fechar
             // 
-            this.btn_fechar.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_fechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_fechar.Location = new System.Drawing.Point(408, 386);
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(75, 32);
@@ -118,7 +118,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(649, 311);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);

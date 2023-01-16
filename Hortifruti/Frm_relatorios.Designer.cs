@@ -40,7 +40,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(374, 400);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 30);
@@ -51,10 +51,10 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(211, 235);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 34);
+            this.button2.Size = new System.Drawing.Size(96, 34);
             this.button2.TabIndex = 2;
             this.button2.Text = "PRODUTOS";
             this.button2.UseVisualStyleBackColor = true;
@@ -62,10 +62,10 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(374, 235);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 34);
+            this.button3.Size = new System.Drawing.Size(115, 34);
             this.button3.TabIndex = 3;
             this.button3.Text = "PRODUTORES";
             this.button3.UseVisualStyleBackColor = true;
@@ -73,10 +73,10 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(535, 235);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 33);
+            this.button4.Size = new System.Drawing.Size(83, 33);
             this.button4.TabIndex = 4;
             this.button4.Text = "CLIENTES";
             this.button4.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(291, 302);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 33);
@@ -95,7 +95,7 @@
             // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(452, 302);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(85, 33);

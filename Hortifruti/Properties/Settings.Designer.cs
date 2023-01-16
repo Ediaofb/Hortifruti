@@ -32,5 +32,16 @@ namespace Hortifruti.Properties {
                 return ((string)(this["hortifruti_dbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated S" +
+            "ecurity=True")]
+        public string hortifruti_dbConnectionString1 {
+            get {
+                return ((string)(this["hortifruti_dbConnectionString1"]));
+            }
+        }
     }
 }
