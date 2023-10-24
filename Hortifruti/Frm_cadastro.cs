@@ -885,10 +885,10 @@ namespace Hortifruti
 
         private void btn_editar_venda_Click(object sender, EventArgs e)
         {
-            if (comboBox6.Text == "" || textBox_quantidade.Text == "" || textBox_preco_tot.Text == "" || dateTimePicker1.Text == "" || comboBox9.Text =="")
+            if (comboBox6.Text == "" || textBox_quantidade.Text == "" || textBox_preco_tot.Text == "" || dateTimePicker1.Text == "")
             //Verifica se o produto, a quantidade, o preço total e a data estão vazios
             {
-                MessageBox.Show("Por favor, preencha corretamente o produto, a data, a quantidade, a unidade e o preço total da venda!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor, preencha corretamente o produto, a quantidade, a data e o preço total da venda!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -1209,7 +1209,7 @@ namespace Hortifruti
 
         private void button2_Click_1(object sender, EventArgs e)//Botão editar compra
         {
-            if (dateTimePicker3.Text == "" || textBox7.Text == "" || textBox10.Text == "" || textBox12.Text == "")
+            if (dateTimePicker3.Text == "" || comboBox11.Text == "" || textBox10.Text == "" || textBox12.Text == "")
             //Verifica se a data, o produto, a quantidade, o preço total estão vazios
             {
                 MessageBox.Show("Por favor, preencha corretamente a data, o produto, a quantidade e o preço total da compra!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

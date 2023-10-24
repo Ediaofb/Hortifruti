@@ -323,7 +323,7 @@
                 <TextRun>
                   <Value>Kiko Ribeiro Hortifruti</Value>
                   <Style>
-                    <FontSize>12pt</FontSize>
+                    <FontSize>14pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -335,7 +335,7 @@
                 <TextRun>
                   <Value>Ibitiúra de Minas</Value>
                   <Style>
-                    <FontSize>12pt</FontSize>
+                    <FontSize>14pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -347,7 +347,7 @@
                 <TextRun>
                   <Value>Fone (35)999920499</Value>
                   <Style>
-                    <FontSize>12pt</FontSize>
+                    <FontSize>14pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
