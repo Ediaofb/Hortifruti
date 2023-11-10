@@ -4237,7 +4237,8 @@ SELECT Id_cliente, Nome, Endereco, Telefone, e_mail FROM Cliente WHERE (Id_clien
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Data, Nome_Produtor, Produto, Unidade, Quantidade, Valor_unitario, Valor_total, Unidade AS Expr1, Data_Vencimento, Pagamento
 FROM            Compra
-WHERE        (Nome_Produtor LIKE '%' + @produtor + '%') AND (Produto LIKE '%' + @produto + '%') AND (Data BETWEEN @Data1 AND @Data2)";
+WHERE        (Nome_Produtor LIKE '%' + @produtor + '%') AND (Produto LIKE '%' + @produto + '%') AND (Data BETWEEN @Data1 AND @Data2)
+ORDER BY Data";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@produtor", global::System.Data.SqlDbType.VarChar, 40, global::System.Data.ParameterDirection.Input, 0, 0, "Nome_Produtor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@produto", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Produto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

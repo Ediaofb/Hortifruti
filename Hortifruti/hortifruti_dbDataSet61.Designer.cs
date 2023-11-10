@@ -4294,7 +4294,8 @@ SELECT Id_cliente, Nome, Endereco, Telefone, e_mail FROM Cliente WHERE (Id_clien
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Data, Nome_Produtor, Produto, Unidade, Quantidade, Valor_unitario, Valor_total, Unidade AS Expr1, Data_Vencimento, Pagamento
 FROM            Compra
-WHERE        (Nome_Produtor LIKE '%' + @produtor + '%') AND (Produto LIKE '%' + @produto + '%') AND (Data BETWEEN @Data1 AND @Data2)";
+WHERE        (Nome_Produtor LIKE '%' + @produtor + '%') AND (Produto LIKE '%' + @produto + '%') AND (Data BETWEEN @Data1 AND @Data2)
+ORDER BY Data";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@produtor", global::System.Data.SqlDbType.VarChar, 40, global::System.Data.ParameterDirection.Input, 0, 0, "Nome_Produtor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@produto", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Produto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5545,7 +5546,7 @@ SELECT idProduto, Nome, preço FROM Produto WHERE (idProduto = @idProduto)";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [Vendas] ([Cliente], [NomeProduto], [Data], [Data_Vencimento], [Quantidade], [Unidade], [Preco_unitario], [Preco_total], [Condicao], [Pagamento]) VALUES (@Cliente, @NomeProduto, @Data, @Data_Vencimento, @Quantidade, @Unidade, @Preco_unitario, @Preco_total, @Condicao, @Pagamento);
-SELECT Cliente, NomeProduto, Data, Data_Vencimento, Quantidade, Unidade, Preco_unitario, Preco_total, Condicao, Pagamento, Id_vendas FROM Vendas WHERE (Id_vendas = SCOPE_IDENTITY())";
+SELECT Cliente, NomeProduto, Data, Data_Vencimento, Quantidade, Unidade, Preco_unitario, Preco_total, Condicao, Pagamento, Id_vendas FROM Vendas WHERE (Id_vendas = SCOPE_IDENTITY()) ORDER BY Data";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NomeProduto", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NomeProduto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5560,7 +5561,7 @@ SELECT Cliente, NomeProduto, Data, Data_Vencimento, Quantidade, Unidade, Preco_u
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [Vendas] SET [Cliente] = @Cliente, [NomeProduto] = @NomeProduto, [Data] = @Data, [Data_Vencimento] = @Data_Vencimento, [Quantidade] = @Quantidade, [Unidade] = @Unidade, [Preco_unitario] = @Preco_unitario, [Preco_total] = @Preco_total, [Condicao] = @Condicao, [Pagamento] = @Pagamento WHERE (((@IsNull_Cliente = 1 AND [Cliente] IS NULL) OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_NomeProduto = 1 AND [NomeProduto] IS NULL) OR ([NomeProduto] = @Original_NomeProduto)) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Data_Vencimento = 1 AND [Data_Vencimento] IS NULL) OR ([Data_Vencimento] = @Original_Data_Vencimento)) AND ((@IsNull_Quantidade = 1 AND [Quantidade] IS NULL) OR ([Quantidade] = @Original_Quantidade)) AND ((@IsNull_Unidade = 1 AND [Unidade] IS NULL) OR ([Unidade] = @Original_Unidade)) AND ((@IsNull_Preco_unitario = 1 AND [Preco_unitario] IS NULL) OR ([Preco_unitario] = @Original_Preco_unitario)) AND ((@IsNull_Preco_total = 1 AND [Preco_total] IS NULL) OR ([Preco_total] = @Original_Preco_total)) AND ((@IsNull_Condicao = 1 AND [Condicao] IS NULL) OR ([Condicao] = @Original_Condicao)) AND ((@IsNull_Pagamento = 1 AND [Pagamento] IS NULL) OR ([Pagamento] = @Original_Pagamento)) AND ([Id_vendas] = @Original_Id_vendas));
-SELECT Cliente, NomeProduto, Data, Data_Vencimento, Quantidade, Unidade, Preco_unitario, Preco_total, Condicao, Pagamento, Id_vendas FROM Vendas WHERE (Id_vendas = @Id_vendas)";
+SELECT Cliente, NomeProduto, Data, Data_Vencimento, Quantidade, Unidade, Preco_unitario, Preco_total, Condicao, Pagamento, Id_vendas FROM Vendas WHERE (Id_vendas = @Id_vendas) ORDER BY Data";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NomeProduto", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NomeProduto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5609,10 +5610,10 @@ SELECT Cliente, NomeProduto, Data, Data_Vencimento, Quantidade, Unidade, Preco_u
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Cliente, NomeProduto, Data, Data_Vencimento, Quantidade, Unidade, P" +
-                "reco_unitario, Preco_total, Condicao, Pagamento, Id_vendas\r\nFROM            Vend" +
-                "as\r\nWHERE        (Cliente LIKE \'%\' + @cliente + \'%\') AND (Data BETWEEN @data AND" +
-                " @data2)";
+            this._commandCollection[0].CommandText = @"SELECT        Cliente, NomeProduto, Data, Data_Vencimento, Quantidade, Unidade, Preco_unitario, Preco_total, Condicao, Pagamento, Id_vendas
+FROM            Vendas
+WHERE        (Cliente LIKE '%' + @cliente + '%') AND (Data BETWEEN @data AND @data2)
+ORDER BY Data";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cliente", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

@@ -1757,7 +1757,6 @@
             // 
             // textBox9
             // 
-            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(534, 334);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(259, 20);

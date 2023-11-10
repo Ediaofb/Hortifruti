@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace Hortifruti.hortifruti_dbDataSet6TableAdapters {
+    
+    
+    public partial class CompraTableAdapter {
+    }
+}

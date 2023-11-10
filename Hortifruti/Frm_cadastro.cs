@@ -1210,7 +1210,7 @@ namespace Hortifruti
         private void button2_Click_1(object sender, EventArgs e)//Botão editar compra
         {
             if (dateTimePicker3.Text == "" || comboBox11.Text == "" || textBox10.Text == "" || textBox12.Text == "")
-            //Verifica se a data, o produto, a quantidade, o preço total estão vazios
+            //Verifica se a data ou o produto, ou a quantidade, ou o preço total estão vazios
             {
                 MessageBox.Show("Por favor, preencha corretamente a data, o produto, a quantidade e o preço total da compra!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -1811,7 +1811,6 @@ namespace Hortifruti
             {
                 label56.Visible = true;
                 textBox9.Visible = true;
-                textBox9.Enabled = true;
             }
             else
             {

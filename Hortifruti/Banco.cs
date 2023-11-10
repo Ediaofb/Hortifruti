@@ -43,7 +43,7 @@ namespace Hortifruti
 
         public static SqlConnection ConexaoBanco()
         {
-            conexao = new SqlConnection("Data Source=EDSON-PC\\SQLEXPRESS\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+            conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
             conexao.Open();
             MessageBox.Show("Conectou!");
             return conexao;
