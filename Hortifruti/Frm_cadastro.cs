@@ -1807,7 +1807,7 @@ namespace Hortifruti
 
         private void comboBox12_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox11.SelectedIndex == 20)
+            if (comboBox12.SelectedIndex == 20)
             {
                 label56.Visible = true;
                 textBox9.Visible = true;
@@ -1954,7 +1954,7 @@ namespace Hortifruti
         {
             if (dateTimePicker4.Text == "" || comboBox12.Text == "" || textBox16.Text == "" || textBox18.Text == "") //Se a nova data, o nome do produto, a quantidade e o valor total a serem editados não estiverem vazios
             {
-                MessageBox.Show("Preencha a data, o novo nome do produto, a quantidade e o preço para editar a compra!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Preencha a data, o novo nome do produto, a quantidade e o preço total para editar a compra!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             else //Se o novo nome do produto a ser editado estiver vazio

@@ -240,6 +240,7 @@
             // comboBox8
             // 
             this.comboBox8.Enabled = false;
+            this.comboBox8.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
             "Tomate Graúdo",
@@ -265,7 +266,7 @@
             "Outro..."});
             this.comboBox8.Location = new System.Drawing.Point(226, 298);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(240, 21);
+            this.comboBox8.Size = new System.Drawing.Size(240, 23);
             this.comboBox8.TabIndex = 26;
             this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
@@ -283,18 +284,20 @@
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(226, 343);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(460, 20);
+            this.textBox2.Size = new System.Drawing.Size(460, 22);
             this.textBox2.TabIndex = 28;
             this.textBox2.Visible = false;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(226, 91);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(460, 20);
+            this.textBox1.Size = new System.Drawing.Size(460, 22);
             this.textBox1.TabIndex = 19;
             this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
@@ -313,6 +316,7 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "Tomate Graúdo",
@@ -338,7 +342,7 @@
             "Outro..."});
             this.comboBox5.Location = new System.Drawing.Point(226, 45);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(240, 21);
+            this.comboBox5.Size = new System.Drawing.Size(240, 23);
             this.comboBox5.TabIndex = 17;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
@@ -379,9 +383,10 @@
             // textBox6
             // 
             this.textBox6.Enabled = false;
+            this.textBox6.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(226, 395);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(460, 20);
+            this.textBox6.Size = new System.Drawing.Size(460, 22);
             this.textBox6.TabIndex = 30;
             this.textBox6.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox6_MouseClick);
@@ -435,9 +440,10 @@
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(226, 133);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(460, 20);
+            this.textBox3.Size = new System.Drawing.Size(460, 22);
             this.textBox3.TabIndex = 21;
             this.textBox3.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox3_MouseClick);
@@ -512,17 +518,19 @@
             // textBox_novo_email_cliente
             // 
             this.textBox_novo_email_cliente.Enabled = false;
+            this.textBox_novo_email_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_novo_email_cliente.Location = new System.Drawing.Point(231, 515);
             this.textBox_novo_email_cliente.Name = "textBox_novo_email_cliente";
-            this.textBox_novo_email_cliente.Size = new System.Drawing.Size(460, 20);
+            this.textBox_novo_email_cliente.Size = new System.Drawing.Size(460, 22);
             this.textBox_novo_email_cliente.TabIndex = 29;
             this.textBox_novo_email_cliente.TextChanged += new System.EventHandler(this.textBox_novo_email_cliente_TextChanged);
             // 
             // textBox_email_cliente
             // 
+            this.textBox_email_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_email_cliente.Location = new System.Drawing.Point(231, 191);
             this.textBox_email_cliente.Name = "textBox_email_cliente";
-            this.textBox_email_cliente.Size = new System.Drawing.Size(460, 20);
+            this.textBox_email_cliente.Size = new System.Drawing.Size(460, 22);
             this.textBox_email_cliente.TabIndex = 22;
             this.textBox_email_cliente.TextChanged += new System.EventHandler(this.TextBox_email_cliente_TextChanged);
             // 
@@ -574,27 +582,30 @@
             // textBox_novo_tel_cliente
             // 
             this.textBox_novo_tel_cliente.Enabled = false;
+            this.textBox_novo_tel_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_novo_tel_cliente.Location = new System.Drawing.Point(231, 464);
             this.textBox_novo_tel_cliente.Name = "textBox_novo_tel_cliente";
-            this.textBox_novo_tel_cliente.Size = new System.Drawing.Size(460, 20);
+            this.textBox_novo_tel_cliente.Size = new System.Drawing.Size(460, 22);
             this.textBox_novo_tel_cliente.TabIndex = 28;
             this.textBox_novo_tel_cliente.TextChanged += new System.EventHandler(this.textBox_novo_tel_cliente_TextChanged);
             // 
             // textBox_novo_ender_cliente
             // 
             this.textBox_novo_ender_cliente.Enabled = false;
+            this.textBox_novo_ender_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_novo_ender_cliente.Location = new System.Drawing.Point(231, 409);
             this.textBox_novo_ender_cliente.Name = "textBox_novo_ender_cliente";
-            this.textBox_novo_ender_cliente.Size = new System.Drawing.Size(460, 20);
+            this.textBox_novo_ender_cliente.Size = new System.Drawing.Size(460, 22);
             this.textBox_novo_ender_cliente.TabIndex = 27;
             this.textBox_novo_ender_cliente.TextChanged += new System.EventHandler(this.textBox_novo_ender_cliente_TextChanged);
             // 
             // textBox_novo_nome_cliente
             // 
             this.textBox_novo_nome_cliente.Enabled = false;
+            this.textBox_novo_nome_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_novo_nome_cliente.Location = new System.Drawing.Point(231, 348);
             this.textBox_novo_nome_cliente.Name = "textBox_novo_nome_cliente";
-            this.textBox_novo_nome_cliente.Size = new System.Drawing.Size(460, 20);
+            this.textBox_novo_nome_cliente.Size = new System.Drawing.Size(460, 22);
             this.textBox_novo_nome_cliente.TabIndex = 26;
             this.textBox_novo_nome_cliente.TextChanged += new System.EventHandler(this.textBox_novo_nome_cliente_TextChanged);
             // 
@@ -656,25 +667,28 @@
             // 
             // textBox_tel_cliente
             // 
+            this.textBox_tel_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_tel_cliente.Location = new System.Drawing.Point(231, 135);
             this.textBox_tel_cliente.Name = "textBox_tel_cliente";
-            this.textBox_tel_cliente.Size = new System.Drawing.Size(460, 20);
+            this.textBox_tel_cliente.Size = new System.Drawing.Size(460, 22);
             this.textBox_tel_cliente.TabIndex = 21;
             this.textBox_tel_cliente.TextChanged += new System.EventHandler(this.textBox_tel_cliente_TextChanged);
             // 
             // textBox_endereco_cliente
             // 
+            this.textBox_endereco_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_endereco_cliente.Location = new System.Drawing.Point(231, 81);
             this.textBox_endereco_cliente.Name = "textBox_endereco_cliente";
-            this.textBox_endereco_cliente.Size = new System.Drawing.Size(460, 20);
+            this.textBox_endereco_cliente.Size = new System.Drawing.Size(460, 22);
             this.textBox_endereco_cliente.TabIndex = 20;
             this.textBox_endereco_cliente.TextChanged += new System.EventHandler(this.textBox_endereco_cliente_TextChanged);
             // 
             // textBox_nome_cliente
             // 
+            this.textBox_nome_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_nome_cliente.Location = new System.Drawing.Point(231, 30);
             this.textBox_nome_cliente.Name = "textBox_nome_cliente";
-            this.textBox_nome_cliente.Size = new System.Drawing.Size(460, 20);
+            this.textBox_nome_cliente.Size = new System.Drawing.Size(460, 22);
             this.textBox_nome_cliente.TabIndex = 18;
             this.textBox_nome_cliente.TextChanged += new System.EventHandler(this.textBox_nome_cliente_TextChanged);
             // 
@@ -758,17 +772,19 @@
             // textBox_novo_email_fornecedor
             // 
             this.textBox_novo_email_fornecedor.Enabled = false;
+            this.textBox_novo_email_fornecedor.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_novo_email_fornecedor.Location = new System.Drawing.Point(231, 515);
             this.textBox_novo_email_fornecedor.Name = "textBox_novo_email_fornecedor";
-            this.textBox_novo_email_fornecedor.Size = new System.Drawing.Size(460, 20);
+            this.textBox_novo_email_fornecedor.Size = new System.Drawing.Size(460, 22);
             this.textBox_novo_email_fornecedor.TabIndex = 53;
             this.textBox_novo_email_fornecedor.TextChanged += new System.EventHandler(this.textBox_novo_email_fornecedor_TextChanged);
             // 
             // textBox_email_fornecedor
             // 
+            this.textBox_email_fornecedor.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_email_fornecedor.Location = new System.Drawing.Point(231, 191);
             this.textBox_email_fornecedor.Name = "textBox_email_fornecedor";
-            this.textBox_email_fornecedor.Size = new System.Drawing.Size(460, 20);
+            this.textBox_email_fornecedor.Size = new System.Drawing.Size(460, 22);
             this.textBox_email_fornecedor.TabIndex = 46;
             this.textBox_email_fornecedor.TextChanged += new System.EventHandler(this.textBox_email_fornecedor_TextChanged);
             // 
@@ -820,27 +836,30 @@
             // textBox_novo_tel_fornecedor
             // 
             this.textBox_novo_tel_fornecedor.Enabled = false;
+            this.textBox_novo_tel_fornecedor.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_novo_tel_fornecedor.Location = new System.Drawing.Point(231, 464);
             this.textBox_novo_tel_fornecedor.Name = "textBox_novo_tel_fornecedor";
-            this.textBox_novo_tel_fornecedor.Size = new System.Drawing.Size(460, 20);
+            this.textBox_novo_tel_fornecedor.Size = new System.Drawing.Size(460, 22);
             this.textBox_novo_tel_fornecedor.TabIndex = 52;
             this.textBox_novo_tel_fornecedor.TextChanged += new System.EventHandler(this.textBox_novo_tel_fornecedor_TextChanged);
             // 
             // textBox_novo_ender_fornecedor
             // 
             this.textBox_novo_ender_fornecedor.Enabled = false;
+            this.textBox_novo_ender_fornecedor.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_novo_ender_fornecedor.Location = new System.Drawing.Point(231, 409);
             this.textBox_novo_ender_fornecedor.Name = "textBox_novo_ender_fornecedor";
-            this.textBox_novo_ender_fornecedor.Size = new System.Drawing.Size(460, 20);
+            this.textBox_novo_ender_fornecedor.Size = new System.Drawing.Size(460, 22);
             this.textBox_novo_ender_fornecedor.TabIndex = 51;
             this.textBox_novo_ender_fornecedor.TextChanged += new System.EventHandler(this.textBox_novo_ender_fornecedor_TextChanged);
             // 
             // textBox_novo_nome_fornecedor
             // 
             this.textBox_novo_nome_fornecedor.Enabled = false;
+            this.textBox_novo_nome_fornecedor.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_novo_nome_fornecedor.Location = new System.Drawing.Point(231, 348);
             this.textBox_novo_nome_fornecedor.Name = "textBox_novo_nome_fornecedor";
-            this.textBox_novo_nome_fornecedor.Size = new System.Drawing.Size(460, 20);
+            this.textBox_novo_nome_fornecedor.Size = new System.Drawing.Size(460, 22);
             this.textBox_novo_nome_fornecedor.TabIndex = 50;
             this.textBox_novo_nome_fornecedor.TextChanged += new System.EventHandler(this.textBox_novo_nome_fornecedor_TextChanged);
             // 
@@ -902,25 +921,28 @@
             // 
             // textBox_telefone_fornecedor
             // 
+            this.textBox_telefone_fornecedor.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_telefone_fornecedor.Location = new System.Drawing.Point(231, 135);
             this.textBox_telefone_fornecedor.Name = "textBox_telefone_fornecedor";
-            this.textBox_telefone_fornecedor.Size = new System.Drawing.Size(460, 20);
+            this.textBox_telefone_fornecedor.Size = new System.Drawing.Size(460, 22);
             this.textBox_telefone_fornecedor.TabIndex = 45;
             this.textBox_telefone_fornecedor.TextChanged += new System.EventHandler(this.textBox_telefone_fornecedor_TextChanged);
             // 
             // textBox_ender_fornecedor
             // 
+            this.textBox_ender_fornecedor.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ender_fornecedor.Location = new System.Drawing.Point(231, 81);
             this.textBox_ender_fornecedor.Name = "textBox_ender_fornecedor";
-            this.textBox_ender_fornecedor.Size = new System.Drawing.Size(460, 20);
+            this.textBox_ender_fornecedor.Size = new System.Drawing.Size(460, 22);
             this.textBox_ender_fornecedor.TabIndex = 44;
             this.textBox_ender_fornecedor.TextChanged += new System.EventHandler(this.textBox_ender_fornecedor_TextChanged);
             // 
             // textBox_nome_fornecedor
             // 
+            this.textBox_nome_fornecedor.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_nome_fornecedor.Location = new System.Drawing.Point(231, 30);
             this.textBox_nome_fornecedor.Name = "textBox_nome_fornecedor";
-            this.textBox_nome_fornecedor.Size = new System.Drawing.Size(460, 20);
+            this.textBox_nome_fornecedor.Size = new System.Drawing.Size(460, 22);
             this.textBox_nome_fornecedor.TabIndex = 43;
             this.textBox_nome_fornecedor.TextChanged += new System.EventHandler(this.textBox_nome_fornecedor_TextChanged);
             // 
@@ -1020,6 +1042,7 @@
             // 
             // comboBox16
             // 
+            this.comboBox16.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox16.FormattingEnabled = true;
             this.comboBox16.Items.AddRange(new object[] {
             "Venda a prazo",
@@ -1028,7 +1051,7 @@
             "Cheque a vista"});
             this.comboBox16.Location = new System.Drawing.Point(616, 484);
             this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(174, 22);
+            this.comboBox16.Size = new System.Drawing.Size(174, 23);
             this.comboBox16.TabIndex = 21;
             // 
             // label64
@@ -1042,6 +1065,7 @@
             // 
             // comboBox15
             // 
+            this.comboBox15.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox15.FormattingEnabled = true;
             this.comboBox15.Items.AddRange(new object[] {
             "Venda a prazo",
@@ -1050,7 +1074,7 @@
             "Cheque a vista"});
             this.comboBox15.Location = new System.Drawing.Point(601, 129);
             this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(189, 22);
+            this.comboBox15.Size = new System.Drawing.Size(189, 23);
             this.comboBox15.TabIndex = 8;
             this.comboBox15.SelectedIndexChanged += new System.EventHandler(this.comboBox15_SelectedIndexChanged);
             // 
@@ -1068,13 +1092,13 @@
             // dateTimePicker6
             // 
             this.dateTimePicker6.Enabled = false;
-            this.dateTimePicker6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker6.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker6.Location = new System.Drawing.Point(516, 397);
             this.dateTimePicker6.Name = "dateTimePicker6";
             this.dateTimePicker6.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker6.TabIndex = 17;
-            this.dateTimePicker6.Value = new System.DateTime(2022, 9, 16, 0, 0, 0, 0);
+            this.dateTimePicker6.Value = new System.DateTime(2023, 11, 11, 0, 0, 0, 0);
             this.dateTimePicker6.ValueChanged += new System.EventHandler(this.dateTimePicker6_ValueChanged);
             // 
             // label58
@@ -1090,13 +1114,13 @@
             // 
             // dateTimePicker5
             // 
-            this.dateTimePicker5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker5.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker5.Location = new System.Drawing.Point(516, 44);
             this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker5.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker5.TabIndex = 4;
-            this.dateTimePicker5.Value = new System.DateTime(2022, 10, 25, 0, 0, 0, 0);
+            this.dateTimePicker5.Value = new System.DateTime(2023, 11, 11, 0, 0, 0, 0);
             this.dateTimePicker5.ValueChanged += new System.EventHandler(this.dateTimePicker5_ValueChanged);
             // 
             // label57
@@ -1124,18 +1148,20 @@
             // 
             // textBox5
             // 
+            this.textBox5.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(516, 353);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(274, 20);
+            this.textBox5.Size = new System.Drawing.Size(274, 22);
             this.textBox5.TabIndex = 15;
             this.textBox5.Visible = false;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
+            this.textBox4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(516, 8);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(274, 20);
+            this.textBox4.Size = new System.Drawing.Size(274, 22);
             this.textBox4.TabIndex = 2;
             this.textBox4.Visible = false;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -1155,8 +1181,9 @@
             // comboBox10
             // 
             this.comboBox10.Enabled = false;
+            this.comboBox10.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.ItemHeight = 14;
+            this.comboBox10.ItemHeight = 15;
             this.comboBox10.Items.AddRange(new object[] {
             "Sacos",
             "Caixas",
@@ -1164,7 +1191,7 @@
             "Unidades"});
             this.comboBox10.Location = new System.Drawing.Point(516, 437);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(198, 22);
+            this.comboBox10.Size = new System.Drawing.Size(198, 23);
             this.comboBox10.TabIndex = 19;
             this.comboBox10.SelectedIndexChanged += new System.EventHandler(this.comboBox10_SelectedIndexChanged);
             // 
@@ -1181,6 +1208,7 @@
             // 
             // comboBox9
             // 
+            this.comboBox9.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Items.AddRange(new object[] {
             "Unidades",
@@ -1189,7 +1217,7 @@
             "Sacos"});
             this.comboBox9.Location = new System.Drawing.Point(516, 84);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(198, 22);
+            this.comboBox9.Size = new System.Drawing.Size(198, 23);
             this.comboBox9.TabIndex = 6;
             this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
@@ -1207,6 +1235,7 @@
             // comboBox7
             // 
             this.comboBox7.Enabled = false;
+            this.comboBox7.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
             "Tomate Graúdo",
@@ -1232,12 +1261,13 @@
             "Outro..."});
             this.comboBox7.Location = new System.Drawing.Point(232, 355);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(193, 22);
+            this.comboBox7.Size = new System.Drawing.Size(193, 23);
             this.comboBox7.TabIndex = 14;
             this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // comboBox6
             // 
+            this.comboBox6.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
             "Tomate Graúdo",
@@ -1263,19 +1293,20 @@
             "Outro..."});
             this.comboBox6.Location = new System.Drawing.Point(232, 8);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(193, 22);
+            this.comboBox6.Size = new System.Drawing.Size(193, 23);
             this.comboBox6.TabIndex = 1;
             this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // comboBox4
             // 
+            this.comboBox4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Não",
             "Sim"});
             this.comboBox4.Location = new System.Drawing.Point(232, 598);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(133, 22);
+            this.comboBox4.Size = new System.Drawing.Size(133, 23);
             this.comboBox4.TabIndex = 24;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
@@ -1292,13 +1323,14 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Não",
             "Sim"});
             this.comboBox1.Location = new System.Drawing.Point(232, 253);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 22);
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -1339,7 +1371,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(232, 397);
             this.dateTimePicker2.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
@@ -1347,23 +1379,26 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(153, 22);
             this.dateTimePicker2.TabIndex = 16;
+            this.dateTimePicker2.Value = new System.DateTime(2023, 11, 11, 15, 16, 33, 0);
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // textBox_cliente_novo
             // 
             this.textBox_cliente_novo.Enabled = false;
+            this.textBox_cliente_novo.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_cliente_novo.Location = new System.Drawing.Point(232, 563);
             this.textBox_cliente_novo.Name = "textBox_cliente_novo";
-            this.textBox_cliente_novo.Size = new System.Drawing.Size(337, 20);
+            this.textBox_cliente_novo.Size = new System.Drawing.Size(337, 22);
             this.textBox_cliente_novo.TabIndex = 23;
             this.textBox_cliente_novo.TextChanged += new System.EventHandler(this.textBox_cliente_novo_TextChanged);
             // 
             // textBox_preco_tot_novo
             // 
             this.textBox_preco_tot_novo.Enabled = false;
+            this.textBox_preco_tot_novo.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_preco_tot_novo.Location = new System.Drawing.Point(232, 529);
             this.textBox_preco_tot_novo.Name = "textBox_preco_tot_novo";
-            this.textBox_preco_tot_novo.Size = new System.Drawing.Size(193, 20);
+            this.textBox_preco_tot_novo.Size = new System.Drawing.Size(193, 22);
             this.textBox_preco_tot_novo.TabIndex = 22;
             this.textBox_preco_tot_novo.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox_preco_tot_novo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_preco_tot_novo_MouseClick);
@@ -1372,9 +1407,10 @@
             // textBox_preco_un_novo
             // 
             this.textBox_preco_un_novo.Enabled = false;
+            this.textBox_preco_un_novo.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_preco_un_novo.Location = new System.Drawing.Point(232, 482);
             this.textBox_preco_un_novo.Name = "textBox_preco_un_novo";
-            this.textBox_preco_un_novo.Size = new System.Drawing.Size(193, 20);
+            this.textBox_preco_un_novo.Size = new System.Drawing.Size(193, 22);
             this.textBox_preco_un_novo.TabIndex = 20;
             this.textBox_preco_un_novo.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox_preco_un_novo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_preco_un_novo_MouseClick);
@@ -1383,9 +1419,10 @@
             // textBox_quantidade_novo
             // 
             this.textBox_quantidade_novo.Enabled = false;
+            this.textBox_quantidade_novo.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_quantidade_novo.Location = new System.Drawing.Point(232, 438);
             this.textBox_quantidade_novo.Name = "textBox_quantidade_novo";
-            this.textBox_quantidade_novo.Size = new System.Drawing.Size(193, 20);
+            this.textBox_quantidade_novo.Size = new System.Drawing.Size(193, 22);
             this.textBox_quantidade_novo.TabIndex = 18;
             this.textBox_quantidade_novo.TextChanged += new System.EventHandler(this.textBox_quantidade_novo_TextChanged);
             // 
@@ -1490,18 +1527,19 @@
             // 
             // textBox_cliente
             // 
+            this.textBox_cliente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_cliente.Location = new System.Drawing.Point(232, 216);
             this.textBox_cliente.Name = "textBox_cliente";
-            this.textBox_cliente.Size = new System.Drawing.Size(278, 20);
+            this.textBox_cliente.Size = new System.Drawing.Size(278, 22);
             this.textBox_cliente.TabIndex = 9;
             this.textBox_cliente.TextChanged += new System.EventHandler(this.textBox_cliente_TextChanged);
             // 
             // textBox_preco_tot
             // 
-            this.textBox_preco_tot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_preco_tot.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_preco_tot.Location = new System.Drawing.Point(232, 174);
             this.textBox_preco_tot.Name = "textBox_preco_tot";
-            this.textBox_preco_tot.Size = new System.Drawing.Size(193, 20);
+            this.textBox_preco_tot.Size = new System.Drawing.Size(193, 22);
             this.textBox_preco_tot.TabIndex = 8;
             this.textBox_preco_tot.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox_preco_tot.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_preco_tot_MouseClick);
@@ -1509,10 +1547,10 @@
             // 
             // textBox_preco_un
             // 
-            this.textBox_preco_un.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_preco_un.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_preco_un.Location = new System.Drawing.Point(232, 129);
             this.textBox_preco_un.Name = "textBox_preco_un";
-            this.textBox_preco_un.Size = new System.Drawing.Size(193, 20);
+            this.textBox_preco_un.Size = new System.Drawing.Size(193, 22);
             this.textBox_preco_un.TabIndex = 7;
             this.textBox_preco_un.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox_preco_un.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_preco_un_MouseClick);
@@ -1520,10 +1558,10 @@
             // 
             // textBox_quantidade
             // 
-            this.textBox_quantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_quantidade.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_quantidade.Location = new System.Drawing.Point(232, 87);
             this.textBox_quantidade.Name = "textBox_quantidade";
-            this.textBox_quantidade.Size = new System.Drawing.Size(193, 20);
+            this.textBox_quantidade.Size = new System.Drawing.Size(193, 22);
             this.textBox_quantidade.TabIndex = 5;
             this.textBox_quantidade.TextChanged += new System.EventHandler(this.textBox_quantidade_TextChanged);
             // 
@@ -1573,14 +1611,15 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(232, 44);
             this.dateTimePicker1.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(153, 22);
             this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 11, 11, 15, 16, 21, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label24
@@ -1665,6 +1704,7 @@
             // comboBox14
             // 
             this.comboBox14.Enabled = false;
+            this.comboBox14.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox14.FormattingEnabled = true;
             this.comboBox14.Items.AddRange(new object[] {
             "Sacos",
@@ -1673,7 +1713,7 @@
             "Unidades"});
             this.comboBox14.Location = new System.Drawing.Point(534, 413);
             this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(200, 21);
+            this.comboBox14.Size = new System.Drawing.Size(200, 23);
             this.comboBox14.TabIndex = 19;
             this.comboBox14.SelectedIndexChanged += new System.EventHandler(this.comboBox14_SelectedIndexChanged);
             // 
@@ -1691,11 +1731,13 @@
             // dateTimePicker8
             // 
             this.dateTimePicker8.Enabled = false;
+            this.dateTimePicker8.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker8.Location = new System.Drawing.Point(534, 376);
             this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker8.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker8.TabIndex = 17;
+            this.dateTimePicker8.Value = new System.DateTime(2023, 11, 11, 15, 16, 11, 0);
             this.dateTimePicker8.ValueChanged += new System.EventHandler(this.dateTimePicker8_ValueChanged);
             // 
             // label61
@@ -1711,6 +1753,7 @@
             // 
             // comboBox13
             // 
+            this.comboBox13.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox13.FormattingEnabled = true;
             this.comboBox13.Items.AddRange(new object[] {
             "Unidades",
@@ -1719,7 +1762,7 @@
             "Sacos"});
             this.comboBox13.Location = new System.Drawing.Point(534, 82);
             this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(154, 21);
+            this.comboBox13.Size = new System.Drawing.Size(154, 23);
             this.comboBox13.TabIndex = 6;
             this.comboBox13.SelectedIndexChanged += new System.EventHandler(this.comboBox13_SelectedIndexChanged);
             // 
@@ -1736,12 +1779,13 @@
             // 
             // dateTimePicker7
             // 
+            this.dateTimePicker7.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker7.Location = new System.Drawing.Point(534, 45);
             this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(154, 20);
+            this.dateTimePicker7.Size = new System.Drawing.Size(154, 22);
             this.dateTimePicker7.TabIndex = 4;
-            this.dateTimePicker7.Value = new System.DateTime(2022, 10, 25, 9, 42, 58, 0);
+            this.dateTimePicker7.Value = new System.DateTime(2023, 11, 11, 0, 0, 0, 0);
             this.dateTimePicker7.ValueChanged += new System.EventHandler(this.dateTimePicker7_ValueChanged);
             // 
             // label59
@@ -1757,9 +1801,10 @@
             // 
             // textBox9
             // 
+            this.textBox9.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(534, 334);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(259, 20);
+            this.textBox9.Size = new System.Drawing.Size(259, 22);
             this.textBox9.TabIndex = 15;
             this.textBox9.Visible = false;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
@@ -1779,6 +1824,7 @@
             // comboBox12
             // 
             this.comboBox12.Enabled = false;
+            this.comboBox12.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox12.FormattingEnabled = true;
             this.comboBox12.Items.AddRange(new object[] {
             "Tomate Graúdo",
@@ -1804,15 +1850,16 @@
             "Outro..."});
             this.comboBox12.Location = new System.Drawing.Point(232, 332);
             this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(200, 21);
+            this.comboBox12.Size = new System.Drawing.Size(200, 23);
             this.comboBox12.TabIndex = 14;
             this.comboBox12.SelectedIndexChanged += new System.EventHandler(this.comboBox12_SelectedIndexChanged);
             // 
             // textBox7
             // 
+            this.textBox7.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(534, 8);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(259, 20);
+            this.textBox7.Size = new System.Drawing.Size(259, 22);
             this.textBox7.TabIndex = 2;
             this.textBox7.Visible = false;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
@@ -1831,6 +1878,7 @@
             // 
             // comboBox11
             // 
+            this.comboBox11.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Items.AddRange(new object[] {
             "Tomate Graúdo",
@@ -1856,33 +1904,35 @@
             "Outro..."});
             this.comboBox11.Location = new System.Drawing.Point(232, 5);
             this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(200, 21);
+            this.comboBox11.Size = new System.Drawing.Size(200, 23);
             this.comboBox11.TabIndex = 1;
             this.comboBox11.SelectedIndexChanged += new System.EventHandler(this.comboBox11_SelectedIndexChanged);
             // 
             // comboBox3
             // 
             this.comboBox3.Enabled = false;
+            this.comboBox3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ItemHeight = 13;
+            this.comboBox3.ItemHeight = 15;
             this.comboBox3.Items.AddRange(new object[] {
             "Não",
             "Sim"});
             this.comboBox3.Location = new System.Drawing.Point(232, 569);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.Size = new System.Drawing.Size(121, 23);
             this.comboBox3.TabIndex = 23;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox2
             // 
+            this.comboBox2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Não",
             "Sim"});
             this.comboBox2.Location = new System.Drawing.Point(232, 242);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 10;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -1911,9 +1961,10 @@
             // textBox18
             // 
             this.textBox18.Enabled = false;
+            this.textBox18.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox18.Location = new System.Drawing.Point(232, 494);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(200, 20);
+            this.textBox18.Size = new System.Drawing.Size(200, 22);
             this.textBox18.TabIndex = 21;
             this.textBox18.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox18_MouseClick);
@@ -1922,9 +1973,10 @@
             // textBox17
             // 
             this.textBox17.Enabled = false;
+            this.textBox17.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox17.Location = new System.Drawing.Point(232, 455);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(200, 20);
+            this.textBox17.Size = new System.Drawing.Size(200, 22);
             this.textBox17.TabIndex = 20;
             this.textBox17.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox17.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox17_MouseClick);
@@ -1933,29 +1985,33 @@
             // textBox16
             // 
             this.textBox16.Enabled = false;
+            this.textBox16.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox16.Location = new System.Drawing.Point(232, 415);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(200, 20);
+            this.textBox16.Size = new System.Drawing.Size(200, 22);
             this.textBox16.TabIndex = 18;
             this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // textBox15
             // 
             this.textBox15.Enabled = false;
+            this.textBox15.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox15.Location = new System.Drawing.Point(232, 532);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(324, 20);
+            this.textBox15.Size = new System.Drawing.Size(324, 22);
             this.textBox15.TabIndex = 22;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // dateTimePicker4
             // 
             this.dateTimePicker4.Enabled = false;
+            this.dateTimePicker4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker4.Location = new System.Drawing.Point(232, 378);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(136, 20);
+            this.dateTimePicker4.Size = new System.Drawing.Size(136, 22);
             this.dateTimePicker4.TabIndex = 16;
+            this.dateTimePicker4.Value = new System.DateTime(2023, 11, 11, 15, 16, 6, 0);
             this.dateTimePicker4.ValueChanged += new System.EventHandler(this.dateTimePicker4_ValueChanged);
             // 
             // label50
@@ -2080,9 +2136,10 @@
             // 
             // textBox12
             // 
+            this.textBox12.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.Location = new System.Drawing.Point(232, 159);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(200, 20);
+            this.textBox12.Size = new System.Drawing.Size(200, 22);
             this.textBox12.TabIndex = 8;
             this.textBox12.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox12_MouseClick);
@@ -2090,9 +2147,10 @@
             // 
             // textBox11
             // 
+            this.textBox11.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(232, 117);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(200, 20);
+            this.textBox11.Size = new System.Drawing.Size(200, 22);
             this.textBox11.TabIndex = 7;
             this.textBox11.Text = "Utilize \'.\' e não \',\' para decimal";
             this.textBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox11_MouseClick);
@@ -2100,27 +2158,31 @@
             // 
             // textBox10
             // 
+            this.textBox10.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(232, 79);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(200, 20);
+            this.textBox10.Size = new System.Drawing.Size(200, 22);
             this.textBox10.TabIndex = 5;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // textBox8
             // 
+            this.textBox8.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(232, 199);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(292, 20);
+            this.textBox8.Size = new System.Drawing.Size(292, 22);
             this.textBox8.TabIndex = 9;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker3.Location = new System.Drawing.Point(232, 42);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(136, 20);
+            this.dateTimePicker3.Size = new System.Drawing.Size(136, 22);
             this.dateTimePicker3.TabIndex = 3;
+            this.dateTimePicker3.Value = new System.DateTime(2023, 11, 11, 15, 15, 42, 0);
             this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // label42
