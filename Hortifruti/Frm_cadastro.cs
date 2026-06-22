@@ -2,12 +2,14 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Configuration;
 //using MySql.Data.MySqlClient;
 
 namespace Hortifruti
 {
     public partial class Frm_cadastro : Form
     {
+        
         SqlConnection conexao;
         SqlCommand comando, comando2;
         SqlDataReader dr, dr2;
@@ -40,8 +42,8 @@ namespace Hortifruti
                 {
                     if (comboBox5.SelectedIndex != 20)//Se o produto selecionado é diferente de "Outro..."
                     {
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
-                        verifica = "SELECT Nome from Produto Where Nome = '" + comboBox5.Text + "'"; //Seleciona o nome do produto selceionado para verificar se ele já existe
+                        conexao = Conexao.CriarConexao();
+                        verifica = "SELECT Nome from Produto Where Nome = '" + comboBox5.Text + "'"; //Seleciona o nome do produto escolhido para verificar se ele já existe
 
                         SqlCommand command = new SqlCommand(verifica, conexao);
 
@@ -57,7 +59,7 @@ namespace Hortifruti
                         else //Se o produto desejado ainda não foi cadastrado
                         {
                             //passa a string de conexão 
-                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = Conexao.CriarConexao();
                             strSQL = "INSERT INTO produto (nome, preço)" + "VALUES('" + comboBox5.Text + "' , '" + textBox3.Text + "')";
                             // Preparando a conexão
                             comando = new SqlCommand(strSQL, conexao);
@@ -75,7 +77,7 @@ namespace Hortifruti
                     }
                     else//Se o produto selecionado é igual a "Outro..." (Não está na lista do ComboBox, é "personalizado")
                     {
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
                         verifica = "SELECT Nome from Produto Where Nome = '" + textBox1.Text + "'";
 
                         SqlCommand command = new SqlCommand(verifica, conexao);
@@ -93,7 +95,7 @@ namespace Hortifruti
                         else
                         {
                             //passa a string de conexão 
-                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = Conexao.CriarConexao();
                             strSQL = "INSERT INTO produto (nome, preço)" + "VALUES('" + textBox1.Text + "' , '" + textBox3.Text + "')";
                             // Preparando a conexão
                             comando = new SqlCommand(strSQL, conexao);
@@ -164,7 +166,7 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
 
                         aux = "SELECT idProduto from produto WHERE nome = @nome";
                         comando = new SqlCommand(aux, conexao);
@@ -257,7 +259,7 @@ namespace Hortifruti
             {
                 try
                 {
-                    conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                    conexao = Conexao.CriarConexao();
                     verifica = "SELECT Nome from Cliente Where Nome = '" + textBox_nome_cliente.Text + "'"; //Seleciona o nome do produto selceionado para verificar se ele já existe
 
                     SqlCommand command = new SqlCommand(verifica, conexao);
@@ -274,7 +276,7 @@ namespace Hortifruti
                     else //Se o produto desejado ainda não foi cadastrado
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
                         strSQL = "INSERT INTO cliente (nome, endereco, telefone, e_mail)" + "VALUES('" + textBox_nome_cliente.Text + "' ,'" + textBox_endereco_cliente.Text + "' , '" + textBox_tel_cliente.Text + "' , '" + textBox_email_cliente.Text + "')";
                         // Preparando a conexão
                         comando = new SqlCommand(strSQL, conexao);
@@ -338,7 +340,7 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
 
                         aux = "SELECT id_cliente from Cliente WHERE nome = @nome";
                         comando = new SqlCommand(aux, conexao);
@@ -427,7 +429,7 @@ namespace Hortifruti
                     {
                         try
                         {
-                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = Conexao.CriarConexao();
 
                             aux = "SELECT Id_cliente from CLIENTE WHERE Nome = @nome";
                             comando = new SqlCommand(aux, conexao);
@@ -511,7 +513,7 @@ namespace Hortifruti
             {
                 try
                 {
-                    conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                    conexao = Conexao.CriarConexao();
                     verifica = "SELECT Nome from Produtor Where Nome = '" + textBox_nome_fornecedor.Text + "'"; //Seleciona o nome do produto selceionado para verificar se ele já existe
 
                     SqlCommand command = new SqlCommand(verifica, conexao);
@@ -528,7 +530,7 @@ namespace Hortifruti
                     else //Se o produto desejado ainda não foi cadastrado
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
                         strSQL = "INSERT INTO produtor (nome, endereco, telefone, e_mail)" + "VALUES('" + textBox_nome_fornecedor.Text + "' ,'" + textBox_ender_fornecedor.Text + "' , '" + textBox_telefone_fornecedor.Text + "' , '" + textBox_email_fornecedor.Text + "')";
                         // Preparando a conexão
                         comando = new SqlCommand(strSQL, conexao);
@@ -601,7 +603,7 @@ namespace Hortifruti
                         try
                         {
                             //passa a string de conexão
-                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = Conexao.CriarConexao();
 
                             aux = "SELECT Id_produtor from produtor WHERE nome = @nome"; //obtendo o id do produto
                             comando = new SqlCommand(aux, conexao);
@@ -708,16 +710,16 @@ namespace Hortifruti
                 {
 
                     //passa a string de conexão
-                    conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
-                    strSQL = "INSERT INTO VENDAS (NomeProduto, Data, Quantidade, Unidade, Preco_unitario, Preco_total, Cliente, Pagamento, Data_Vencimento, Condicao) VALUES(@nomeproduto, @data, @quantidade, @unidade, @precounitario, @precototal, @cliente, @pagamento, @data_venc, @condicao)";
+                    conexao = Conexao.CriarConexao();
+                    strSQL = "INSERT INTO VENDAS (Nome_Produto, Data, Quantidade, Unidade, Preco_unitario, Preco_total, Cliente, Pagamento, Data_Vencimento, Condicao) VALUES(@nome_produto, @data, @quantidade, @unidade, @precounitario, @precototal, @cliente, @pagamento, @data_venc, @condicao)";
 
 
                     // Preparando a conexão
                     comando = new SqlCommand(strSQL, conexao);
                     if (comboBox6.SelectedIndex != 20)//Se o produto selecionado for diferente de 'outro'
-                        comando.Parameters.AddWithValue("@nomeproduto", comboBox6.Text);
+                        comando.Parameters.AddWithValue("@nome_produto", comboBox6.Text);
                     else//Se o produto selecionado for igual a 'outro'
-                            comando.Parameters.AddWithValue("@nomeproduto", textBox4.Text);                                
+                            comando.Parameters.AddWithValue("@nome_produto", textBox4.Text);                                
                     comando.Parameters.AddWithValue("@data", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
                     comando.Parameters.AddWithValue("@quantidade", textBox_quantidade.Text);
                     comando.Parameters.AddWithValue("@unidade", comboBox9.Text);
@@ -725,9 +727,9 @@ namespace Hortifruti
                     comando.Parameters.AddWithValue("@precototal", textBox_preco_tot.Text);
                     comando.Parameters.AddWithValue("@cliente", textBox_cliente.Text);
                     if(comboBox1.SelectedIndex == 0)//Se o pagamento não foi realizado
-                        comando.Parameters.AddWithValue("@pagamento", 'N');
+                        comando.Parameters.AddWithValue("@pagamento", '0');
                     else //Se o pagamento foi realizado
-                        comando.Parameters.AddWithValue("@pagamento", 'S');
+                        comando.Parameters.AddWithValue("@pagamento", '1');
                     comando.Parameters.AddWithValue("@data_venc", dateTimePicker5.Value);
                     comando.Parameters.AddWithValue("@condicao", comboBox15.Text);
 
@@ -786,7 +788,7 @@ namespace Hortifruti
                         try
                         {
                             //passa a string de conexão
-                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = Conexao.CriarConexao();
 
                             aux = "SELECT Id_vendas from Vendas WHERE NomeProduto = @nome AND Cliente = @cliente AND Data = @data"; //obtendo o id do produto
                             comando = new SqlCommand(aux, conexao);
@@ -942,7 +944,7 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
 
                         aux = "SELECT Id_Vendas FROM Vendas WHERE Cliente = @cliente AND NomeProduto = @nomeproduto AND Data = @data AND Quantidade = @quantidade";
                         comando = new SqlCommand(aux, conexao);
@@ -1018,7 +1020,7 @@ namespace Hortifruti
                 try
                 {
                         //passa a string de conexão 
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
                         strSQL = "INSERT INTO compra (data, produto, nome_produtor, quantidade, Valor_unitario, Valor_total, Pagamento, data_vencimento, Unidade)" + "VALUES(@data, @produto, @produtor, @quantidade, @valor_unit, @valor_tot, @pagamento, @data_venc, @unidade)";
                         // Preparando a conexão
                         comando = new SqlCommand(strSQL, conexao);
@@ -1032,9 +1034,9 @@ namespace Hortifruti
                         comando.Parameters.AddWithValue("@valor_unit", textBox11.Text);
                         comando.Parameters.AddWithValue("@valor_tot", textBox12.Text);
                         if(comboBox2.SelectedIndex == 0)//Se o pagamento não foi realizado
-                            comando.Parameters.AddWithValue("@pagamento", 'N');
+                            comando.Parameters.AddWithValue("@pagamento", 0);
                         else //Se o pagamento foi realizado
-                            comando.Parameters.AddWithValue("@pagamento", 'S');
+                            comando.Parameters.AddWithValue("@pagamento", 1);
                         comando.Parameters.AddWithValue("@data_venc", dateTimePicker7.Value);
                         comando.Parameters.AddWithValue("@unidade", comboBox13.Text);
 
@@ -1091,7 +1093,7 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
 
                         aux = "SELECT Id_Compra FROM Compra Where Nome_Produtor = @nomeprodutor AND Produto = @produto AND Data = @data AND Quantidade = @quantidade";
                         comando = new SqlCommand(aux, conexao);
@@ -1174,7 +1176,7 @@ namespace Hortifruti
                     try
                     {
                         //passa a string de conexão
-                        conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                        conexao = Conexao.CriarConexao();
 
                         aux = "DELETE FROM Produtor WHERE Nome = @nome";
                         comando = new SqlCommand(aux, conexao);
@@ -1971,7 +1973,7 @@ namespace Hortifruti
                         try
                         {
                             //passa a string de conexão
-                            conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                            conexao = Conexao.CriarConexao();
 
                             aux = "SELECT Id_compra from Compra WHERE Produto = @produto AND Nome_Produtor = @nome_produtor AND data = @data"; //obtendo o id da venda
                             comando = new SqlCommand(aux, conexao);
@@ -2090,7 +2092,7 @@ namespace Hortifruti
                             {
                                 //passa a string de conexão
 
-                                conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                                conexao = Conexao.CriarConexao();
 
                                 aux = "SELECT idProduto from Produto WHERE Nome = @nome"; //obtendo o id do produto
                                 comando = new SqlCommand(aux, conexao);
@@ -2167,7 +2169,7 @@ namespace Hortifruti
                             {
                                 //passa a string de conexão
 
-                                conexao = new SqlConnection("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True");
+                                conexao = Conexao.CriarConexao();
 
                                 aux = "SELECT idProduto from Produto WHERE Nome = @nome"; //obtendo o id do produto
                                 comando = new SqlCommand(aux, conexao);

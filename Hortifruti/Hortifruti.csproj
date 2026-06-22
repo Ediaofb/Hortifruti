@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco.cs" />
+    <Compile Include="Conexao.cs" />
     <Compile Include="Frm_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +216,10 @@
     </Compile>
     <Compile Include="Frm_venda.Designer.cs">
       <DependentUpon>Frm_venda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeradorSenha.cs" />
+    <Compile Include="hortifruti_dbDataSet.cs">
+      <DependentUpon>hortifruti_dbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="hortifruti_dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -485,7 +490,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

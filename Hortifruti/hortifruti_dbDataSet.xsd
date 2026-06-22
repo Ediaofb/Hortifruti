@@ -399,7 +399,7 @@ SELECT Id_vendas, NomeProduto, Data, Quantidade, Preco_unitario, Preco_total, Pa
   <xs:element name="hortifruti_dbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="hortifruti_dbDataSet" msprop:Generator_UserDSName="hortifruti_dbDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Cliente" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_RowClassName="ClienteRow">
+        <xs:element name="Cliente" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowEvArgName="ClienteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_cliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_cliente" msprop:Generator_ColumnPropNameInRow="Id_cliente" msprop:Generator_ColumnPropNameInTable="Id_clienteColumn" msprop:Generator_UserColumnName="Id_cliente" type="xs:int" />
@@ -434,7 +434,7 @@ SELECT Id_vendas, NomeProduto, Data, Quantidade, Preco_unitario, Preco_total, Pa
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Compra" msprop:Generator_TableClassName="CompraDataTable" msprop:Generator_TableVarName="tableCompra" msprop:Generator_TablePropName="Compra" msprop:Generator_RowDeletingName="CompraRowDeleting" msprop:Generator_RowChangingName="CompraRowChanging" msprop:Generator_RowEvHandlerName="CompraRowChangeEventHandler" msprop:Generator_RowDeletedName="CompraRowDeleted" msprop:Generator_UserTableName="Compra" msprop:Generator_RowChangedName="CompraRowChanged" msprop:Generator_RowEvArgName="CompraRowChangeEvent" msprop:Generator_RowClassName="CompraRow">
+        <xs:element name="Compra" msprop:Generator_TableClassName="CompraDataTable" msprop:Generator_TableVarName="tableCompra" msprop:Generator_RowChangedName="CompraRowChanged" msprop:Generator_TablePropName="Compra" msprop:Generator_RowDeletingName="CompraRowDeleting" msprop:Generator_RowChangingName="CompraRowChanging" msprop:Generator_RowEvHandlerName="CompraRowChangeEventHandler" msprop:Generator_RowDeletedName="CompraRowDeleted" msprop:Generator_RowClassName="CompraRow" msprop:Generator_UserTableName="Compra" msprop:Generator_RowEvArgName="CompraRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_compra" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_compra" msprop:Generator_ColumnPropNameInRow="Id_compra" msprop:Generator_ColumnPropNameInTable="Id_compraColumn" msprop:Generator_UserColumnName="Id_compra" type="xs:int" />
@@ -448,7 +448,7 @@ SELECT Id_vendas, NomeProduto, Data, Quantidade, Preco_unitario, Preco_total, Pa
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Produto" msprop:Generator_TableClassName="ProdutoDataTable" msprop:Generator_TableVarName="tableProduto" msprop:Generator_TablePropName="Produto" msprop:Generator_RowDeletingName="ProdutoRowDeleting" msprop:Generator_RowChangingName="ProdutoRowChanging" msprop:Generator_RowEvHandlerName="ProdutoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProdutoRowDeleted" msprop:Generator_UserTableName="Produto" msprop:Generator_RowChangedName="ProdutoRowChanged" msprop:Generator_RowEvArgName="ProdutoRowChangeEvent" msprop:Generator_RowClassName="ProdutoRow">
+        <xs:element name="Produto" msprop:Generator_TableClassName="ProdutoDataTable" msprop:Generator_TableVarName="tableProduto" msprop:Generator_RowChangedName="ProdutoRowChanged" msprop:Generator_TablePropName="Produto" msprop:Generator_RowDeletingName="ProdutoRowDeleting" msprop:Generator_RowChangingName="ProdutoRowChanging" msprop:Generator_RowEvHandlerName="ProdutoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProdutoRowDeleted" msprop:Generator_RowClassName="ProdutoRow" msprop:Generator_UserTableName="Produto" msprop:Generator_RowEvArgName="ProdutoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdProduto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProduto" msprop:Generator_ColumnPropNameInRow="IdProduto" msprop:Generator_ColumnPropNameInTable="IdProdutoColumn" msprop:Generator_UserColumnName="IdProduto" type="xs:int" />
@@ -470,7 +470,7 @@ SELECT Id_vendas, NomeProduto, Data, Quantidade, Preco_unitario, Preco_total, Pa
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Produtor" msprop:Generator_TableClassName="ProdutorDataTable" msprop:Generator_TableVarName="tableProdutor" msprop:Generator_TablePropName="Produtor" msprop:Generator_RowDeletingName="ProdutorRowDeleting" msprop:Generator_RowChangingName="ProdutorRowChanging" msprop:Generator_RowEvHandlerName="ProdutorRowChangeEventHandler" msprop:Generator_RowDeletedName="ProdutorRowDeleted" msprop:Generator_UserTableName="Produtor" msprop:Generator_RowChangedName="ProdutorRowChanged" msprop:Generator_RowEvArgName="ProdutorRowChangeEvent" msprop:Generator_RowClassName="ProdutorRow">
+        <xs:element name="Produtor" msprop:Generator_TableClassName="ProdutorDataTable" msprop:Generator_TableVarName="tableProdutor" msprop:Generator_RowChangedName="ProdutorRowChanged" msprop:Generator_TablePropName="Produtor" msprop:Generator_RowDeletingName="ProdutorRowDeleting" msprop:Generator_RowChangingName="ProdutorRowChanging" msprop:Generator_RowEvHandlerName="ProdutorRowChangeEventHandler" msprop:Generator_RowDeletedName="ProdutorRowDeleted" msprop:Generator_RowClassName="ProdutorRow" msprop:Generator_UserTableName="Produtor" msprop:Generator_RowEvArgName="ProdutorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_produtor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_produtor" msprop:Generator_ColumnPropNameInRow="Id_produtor" msprop:Generator_ColumnPropNameInTable="Id_produtorColumn" msprop:Generator_UserColumnName="Id_produtor" type="xs:int" />
@@ -499,7 +499,7 @@ SELECT Id_vendas, NomeProduto, Data, Quantidade, Preco_unitario, Preco_total, Pa
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent" msprop:Generator_RowClassName="UsuarioRow">
+        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_RowClassName="UsuarioRow" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome">
@@ -519,7 +519,7 @@ SELECT Id_vendas, NomeProduto, Data, Quantidade, Preco_unitario, Preco_total, Pa
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vendas" msprop:Generator_TableClassName="VendasDataTable" msprop:Generator_TableVarName="tableVendas" msprop:Generator_TablePropName="Vendas" msprop:Generator_RowDeletingName="VendasRowDeleting" msprop:Generator_RowChangingName="VendasRowChanging" msprop:Generator_RowEvHandlerName="VendasRowChangeEventHandler" msprop:Generator_RowDeletedName="VendasRowDeleted" msprop:Generator_UserTableName="Vendas" msprop:Generator_RowChangedName="VendasRowChanged" msprop:Generator_RowEvArgName="VendasRowChangeEvent" msprop:Generator_RowClassName="VendasRow">
+        <xs:element name="Vendas" msprop:Generator_TableClassName="VendasDataTable" msprop:Generator_TableVarName="tableVendas" msprop:Generator_RowChangedName="VendasRowChanged" msprop:Generator_TablePropName="Vendas" msprop:Generator_RowDeletingName="VendasRowDeleting" msprop:Generator_RowChangingName="VendasRowChanging" msprop:Generator_RowEvHandlerName="VendasRowChangeEventHandler" msprop:Generator_RowDeletedName="VendasRowDeleted" msprop:Generator_RowClassName="VendasRow" msprop:Generator_UserTableName="Vendas" msprop:Generator_RowEvArgName="VendasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_vendas" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_vendas" msprop:Generator_ColumnPropNameInRow="Id_vendas" msprop:Generator_ColumnPropNameInTable="Id_vendasColumn" msprop:Generator_UserColumnName="Id_vendas" type="xs:int" />
@@ -569,8 +569,8 @@ SELECT Id_vendas, NomeProduto, Data, Quantidade, Preco_unitario, Preco_total, Pa
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Compra__COMPRA_I__3A81B327" msdata:parent="Produtor" msdata:child="Compra" msdata:parentkey="Id_produtor" msdata:childkey="COMPRA_ID_PRODUTOR" msprop:Generator_UserChildTable="Compra" msprop:Generator_ChildPropName="GetCompraRows" msprop:Generator_UserRelationName="FK__Compra__COMPRA_I__3A81B327" msprop:Generator_RelationVarName="relationFK__Compra__COMPRA_I__3A81B327" msprop:Generator_UserParentTable="Produtor" msprop:Generator_ParentPropName="ProdutorRow" />
-      <msdata:Relationship name="ProdutoProdutor" msdata:parent="Produto" msdata:child="Produtor" msdata:parentkey="IdProduto" msdata:childkey="IdProduto" msprop:Generator_UserChildTable="Produtor" msprop:Generator_ChildPropName="GetProdutorRows" msprop:Generator_UserRelationName="ProdutoProdutor" msprop:Generator_RelationVarName="relationProdutoProdutor" msprop:Generator_UserParentTable="Produto" msprop:Generator_ParentPropName="ProdutoRow" />
+      <msdata:Relationship name="FK__Compra__COMPRA_I__3A81B327" msdata:parent="Produtor" msdata:child="Compra" msdata:parentkey="Id_produtor" msdata:childkey="COMPRA_ID_PRODUTOR" msprop:Generator_UserChildTable="Compra" msprop:Generator_ChildPropName="GetCompraRows" msprop:Generator_UserRelationName="FK__Compra__COMPRA_I__3A81B327" msprop:Generator_ParentPropName="ProdutorRow" msprop:Generator_RelationVarName="relationFK__Compra__COMPRA_I__3A81B327" msprop:Generator_UserParentTable="Produtor" />
+      <msdata:Relationship name="ProdutoProdutor" msdata:parent="Produto" msdata:child="Produtor" msdata:parentkey="IdProduto" msdata:childkey="IdProduto" msprop:Generator_UserChildTable="Produtor" msprop:Generator_ChildPropName="GetProdutorRows" msprop:Generator_UserRelationName="ProdutoProdutor" msprop:Generator_ParentPropName="ProdutoRow" msprop:Generator_RelationVarName="relationProdutoProdutor" msprop:Generator_UserParentTable="Produto" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

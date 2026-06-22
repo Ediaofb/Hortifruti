@@ -1,78 +1,44 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Hortifruti
+public static class Banco
 {
-    public class Banco
+    public static string ConnectionString
     {
-        public static SqlConnection conexao;
-        private String _stringConexao;
-        private SqlConnection _conexao;
-
-        public Banco(String dadosConexao)
+        get
         {
-            this._conexao = new SqlConnection();
-            this.StringConexao = dadosConexao;
-            this._conexao.ConnectionString = dadosConexao;
+            return ConfigurationManager
+                .ConnectionStrings["HortifrutiConnection"]
+                .ConnectionString;
         }
+    }
 
-        public String StringConexao
+    public static DataTable Consultar(string sql, params SqlParameter[] parametros)
+    {
+        using (SqlConnection con = new SqlConnection(ConnectionString))
+        using (SqlCommand cmd = new SqlCommand(sql, con))
+        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
         {
-            get { return this._stringConexao; }
-            set { this._stringConexao = value; }
+            if (parametros != null)
+                cmd.Parameters.AddRange(parametros);
 
+            DataTable tabela = new DataTable();
+            da.Fill(tabela);
+            return tabela;
         }
+    }
 
-        public SqlConnection ObjetoConexao
+    public static int Executar(string sql, params SqlParameter[] parametros)
+    {
+        using (SqlConnection con = new SqlConnection(ConnectionString))
+        using (SqlCommand cmd = new SqlCommand(sql, con))
         {
-            get { return this._conexao; }
-            set { this._conexao = value; }
-        }
+            if (parametros != null)
+                cmd.Parameters.AddRange(parametros);
 
-        public void Conectar()
-        {
-            this._conexao.Open();
-        }
-
-        public void Desconectar()
-        {
-            this._conexao.Close();
-        }
-
-        public static SqlConnection ConexaoBanco()
-        {
-            conexao = new SqlConnection("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True");
-            conexao.Open();
-            MessageBox.Show("Conectou!");
-            return conexao;
-        }
-
-        public static DataTable consulta(string sql)
-        {
-            SqlDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                var vcon = ConexaoBanco();
-                var cmd = vcon.CreateCommand();
-                cmd.CommandText = sql;
-                da = new SqlDataAdapter(cmd.CommandText, vcon);
-                da.Fill(dt);
-                vcon.Close();
-                return dt;
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message);
-                throw ex;
-            }
-            finally
-            {
-                conexao.Close();
-                conexao = null;
-            }
+            con.Open();
+            return cmd.ExecuteNonQuery();
         }       
-    }    
+    }
 }

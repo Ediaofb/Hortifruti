@@ -26,7 +26,18 @@ namespace Hortifruti.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=EDSON-PC;Initial Catalog=hortifruti_db;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated S" +
+            "ecurity=True")]
+        public string hortifruti_dbConnectionString1 {
+            get {
+                return ((string)(this["hortifruti_dbConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=hortifruti_db;Integrated Security=True")]
         public string hortifruti_dbConnectionString {
             get {
                 return ((string)(this["hortifruti_dbConnectionString"]));
@@ -36,11 +47,10 @@ namespace Hortifruti.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated S" +
-            "ecurity=True")]
-        public string hortifruti_dbConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=hortifruti_db;Integrated Security=True")]
+        public string hortifruti_dbConnectionString2 {
             get {
-                return ((string)(this["hortifruti_dbConnectionString1"]));
+                return ((string)(this["hortifruti_dbConnectionString2"]));
             }
         }
     }

@@ -47,7 +47,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.clienteBindingSource;
+            //reportDataSource1.Value = this.clienteBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Hortifruti.Relatorios.RelCliente.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 96);

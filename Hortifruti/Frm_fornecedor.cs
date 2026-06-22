@@ -10,29 +10,34 @@ namespace Hortifruti
         public Frm_fornecedor()
         {
             InitializeComponent();
-            test();
+            CarregarFornecedor();
         }
 
-        public void test()
+        public void CarregarFornecedor()
         {
-            string config = "Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True";
-            string query = String.Format("SELECT * FROM PRODUTOR", "bd");
+            try
+            {
+                string query = String.Format("SELECT * FROM PRODUTOR ORDER BY NOME");
 
-            SqlConnection conexao = new SqlConnection(config);
-            conexao.Open();
-
-            SqlCommand comand = new SqlCommand(query, conexao);
-            SqlDataAdapter adapter = new SqlDataAdapter(comand);
-
-            DataTable data = new DataTable();
-            adapter.Fill(data);
-            dgvProduto.DataSource = data;
+                using (SqlConnection conexao = Conexao.CriarConexao())
+                using (SqlCommand comando = new SqlCommand(query, conexao))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
+                {
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+                    dgvProduto.DataSource = data;
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
         }
 
         private void Frm_fornecedor_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'hortifruti_dbDataSet2.Produtor'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtorTableAdapter.Fill(hortifruti_dbDataSet6.Produtor, "");
+            //this.produtorTableAdapter.Fill(hortifruti_dbDataSet6.Produtor, "");
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -55,6 +60,7 @@ namespace Hortifruti
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             //define a string de conexao com provedor caminho e nome do banco de dados
             string config = "Data Source=DESKTOP-K8CN5AA\\SQLEXPRESS;Initial Catalog=hortifruti_db;Integrated Security=True";
             //define a instrução SQL
@@ -79,7 +85,31 @@ namespace Hortifruti
             //preenche o datatable via dataadapter
             adapter.Fill(data);
             //atribui o datatable ao datagridview para exibir o resultado
-            dgvProduto.DataSource = data;            
+            dgvProduto.DataSource = data;  */
+            PesquisarProdutor();
+        }
+
+        public void PesquisarProdutor()
+        {
+            try
+            {
+                string query = "SELECT * FROM PRODUTOR WHERE Nome LIKE @nome ORDER BY Nome";
+
+                using (SqlConnection conexao = Conexao.CriarConexao())
+                using (SqlCommand comando = new SqlCommand(query, conexao))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
+                {
+                    comando.Parameters.AddWithValue("@nome", "%" + textBox1.Text + "%");
+
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+                    dgvProduto.DataSource = data;
+                }
+            }
+            catch(Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
         }
     }
 }

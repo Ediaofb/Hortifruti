@@ -4,6 +4,9 @@
 
     partial class hortifruti_dbDataSet
     {
+        partial class ClienteDataTable
+        {
+        }
     }
 }
 

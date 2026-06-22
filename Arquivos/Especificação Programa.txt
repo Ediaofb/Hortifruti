@@ -1,0 +1,22 @@
+Tabela Produtor - Id, Nome, endereço, telefone
+Tabela Produto - Id, Nome, tamanho
+Tabela Compra - Id, Data, quantidade (caixas), valor unitário, valor total, Id produtor (chave estrangeira), Id produto (chave estrangeira)
+Tabela Vendas - Id, Data, quantidade (caixas), valor unitário, valor total, Id produto (chave estrangeira), Id cliente (chave estrangeira) 
+Tabela Cliente - Id, Nome, Telefone, endereço
+
+Telas:
+Tela Inicial: 
+-> Login (Posteriormente);
+
+2@ Tela:
+
+-> Botão Cadastro, Consulta, Relatório, Usuário;
+
+Tela Cadastro: Possibilitar cadastrar, consultar e excluir produto, cliente e fornecedor;
+
+Tela Consulta: Possibilitar consultar produto, cliente e fornecedor;
+
+Tela Relatório: Possibilitar gerar relatórios de produtos, vendas por data (período), por valor, por cliente,
+relatórios de compras por data(período), por valor, por fornecedor;
+
+Tela Usuário: Possibilitar gerenciar usuários com senha de usuário master; 
