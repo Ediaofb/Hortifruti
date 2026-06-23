@@ -1,0 +1,72 @@
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# Build outputs
+# =========================
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+
+# =========================
+# Backup / temporary files
+# =========================
+*.bak
+*.tmp
+*.log
+UpgradeLog.htm
+
+# =========================
+# Visual Studio / Designer generated
+# =========================
+*.cache
+*.ilk
+*.pdb
+*.ipdb
+*.iobj
+
+# =========================
+# SQL Server / Local DB
+# =========================
+*.mdf
+*.ldf
+*.ndf
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Dataset designer (WinForms / Typed DataSet)
+# =========================
+*.xsc
+*.xss
+*.cd
+
+# =========================
+# Publish / deploy
+# =========================
+publish/
+*.publishsettings
+
+# =========================
+# Resharper / Rider (se existir)
+# =========================
+_ReSharper*/
+*.DotSettings.user
+
+# =========================
+# Node / front (caso tenha frontend junto)
+# =========================
+node_modules/
+
+# =========================
+# User-specific configs
+# =========================
+*.config.user
