@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Hortifruti</RootNamespace>
     <AssemblyName>Hortifruti</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -29,6 +29,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -151,6 +152,18 @@
   <ItemGroup>
     <Compile Include="Banco.cs" />
     <Compile Include="Conexao.cs" />
+    <Compile Include="FrmAviso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAviso.Designer.cs">
+      <DependentUpon>FrmAviso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBloqueio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBloqueio.Designer.cs">
+      <DependentUpon>FrmBloqueio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +317,10 @@
       <DependentUpon>FrmRelCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="VerificacaoLicenca.cs" />
+    <EmbeddedResource Include="FrmAviso.resx">
+      <DependentUpon>FrmAviso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_cliente.resx">
       <DependentUpon>Frm_cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,9 +387,6 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <None Include="app.manifest">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="hortifruti_db.bak">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="hortifruti_dbDataSet.xsc">
       <DependentUpon>hortifruti_dbDataSet.xsd</DependentUpon>

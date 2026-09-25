@@ -24,7 +24,22 @@ namespace Hortifruti
         {
             try
             {
-                string query = "SELECT * FROM Vendas ORDER BY Data";
+               string query = @"
+                SELECT
+                Data,
+                Cliente,
+                Nome_Produto,
+                Quantidade,
+                Preco_unitario,
+                Preco_total,
+                Data_vencimento,
+                CASE
+                    WHEN pagamento = 1 THEN 'S'
+                    WHEN pagamento = 0 THEN 'N'
+                    ELSE 'N'
+                END AS Pagamento
+            FROM Vendas
+            ORDER BY Data";
 
                 using (SqlConnection conexao = Conexao.CriarConexao())
                 using (SqlCommand comando = new SqlCommand(query, conexao))
@@ -32,6 +47,15 @@ namespace Hortifruti
                 {
                     DataTable data = new DataTable();
                     adapter.Fill(data);
+
+                    // ── Garante que a coluna Pagamento seja texto ────────────
+                    // Converte a coluna para string ANTES de vincular ao grid
+                    data.Columns["Pagamento"].DataType = typeof(string);
+
+                    // Limpa colunas anteriores para evitar conflito de tipos
+                    dgvVendas.Columns.Clear();
+                    dgvVendas.AutoGenerateColumns = true;
+
                     dgvVendas.DataSource = data;
                 }
             }
@@ -53,6 +77,9 @@ namespace Hortifruti
         // ── Atualiza pagamento do registro selecionado no grid ───────
         public void AtualizarPagamento()
         {
+            // ── Força o DataGridView a confirmar qualquer edição em andamento
+            dgvVendas.EndEdit();
+
             // Verifica se há linha selecionada
             if (dgvVendas.CurrentCell == null)
             {
@@ -65,11 +92,46 @@ namespace Hortifruti
             }
 
             int linha = dgvVendas.CurrentCell.RowIndex;
-            string cliente = dgvVendas.Rows[linha].Cells[1].Value.ToString();
+
+            // Verifica se alguma célula necessária está nula
+            // antes de tentar ler os valores
+            if (dgvVendas.Rows[linha].Cells[0].Value == null ||
+                dgvVendas.Rows[linha].Cells[1].Value == null ||
+                dgvVendas.Rows[linha].Cells[2].Value == null ||
+                dgvVendas.Rows[linha].Cells[6].Value == null ||
+                dgvVendas.Rows[linha].Cells[7].Value == null)
+            {
+                MessageBox.Show(
+                    "Não é possível salvar: há campos vazios na linha selecionada.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            string cliente     = dgvVendas.Rows[linha].Cells[1].Value.ToString();
             string nomeProduto = dgvVendas.Rows[linha].Cells[2].Value.ToString();
-            string data = dgvVendas.Rows[linha].Cells[0].Value.ToString();
-            object precoTotal = dgvVendas.Rows[linha].Cells[6].Value;
-            string pagamento = dgvVendas.Rows[linha].Cells[7].Value.ToString();
+            string data        = dgvVendas.Rows[linha].Cells[0].Value.ToString();
+            object precoTotal  = dgvVendas.Rows[linha].Cells[5].Value;
+
+            // ── Converte S/N para true/false ─────────────────────────────────
+            string valorDigitado =
+                dgvVendas.Rows[linha].Cells[7].Value.ToString().Trim().ToUpper();
+
+            // Valida: só aceita S ou N
+            if (valorDigitado != "S" && valorDigitado != "N")
+            {
+                MessageBox.Show(
+                    "Valor inválido para Pagamento.\n"
+                  + "Digite apenas 'S' (sim) ou 'N' (não).",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Converte para o valor que vai ao banco (1 = true, 0 = false)
+            int pagamentoBanco = (valorDigitado == "S") ? 1 : 0;
 
             try
             {
@@ -78,7 +140,7 @@ namespace Hortifruti
                     SELECT id_vendas
                     FROM   Vendas
                     WHERE  Cliente      = @cliente
-                      AND  NomeProduto  = @produto
+                      AND  Nome_Produto  = @produto
                       AND  Data         = @data
                       AND  Preco_total  = @preco";
 
@@ -112,7 +174,7 @@ namespace Hortifruti
                     return;
                 }
 
-                // 3. Atualiza o pagamento
+                // 3. Atualiza o pagamento gravando 1 ou 0 no banco
                 string sqlUpdate = @"
                     UPDATE Vendas
                     SET    pagamento = @pagamento
@@ -121,8 +183,8 @@ namespace Hortifruti
                 using (SqlConnection conexao = Conexao.CriarConexao())
                 using (SqlCommand comando = new SqlCommand(sqlUpdate, conexao))
                 {
-                    comando.Parameters.AddWithValue("@pagamento", pagamento);
-                    comando.Parameters.AddWithValue("@id", idVenda);
+                    comando.Parameters.AddWithValue("@pagamento", pagamentoBanco);
+                    comando.Parameters.AddWithValue("@id",        idVenda);
 
                     conexao.Open();
                     comando.ExecuteNonQuery();
@@ -135,7 +197,7 @@ namespace Hortifruti
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
-                CarregarVenda(); // atualiza o grid após salvar
+                CarregarVenda(); // recarrega o grid com S/N atualizado
             }
             catch (Exception erro)
             {

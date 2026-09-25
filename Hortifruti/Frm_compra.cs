@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -12,6 +10,10 @@ namespace Hortifruti
         public Frm_compra()
         {
             InitializeComponent();
+
+            // Suprime o erro de formato do DataGridView
+            dgvCompra.DataError += (s, e) => { e.Cancel = true; };
+
             CarregarCompras();
         }
 
@@ -22,20 +24,70 @@ namespace Hortifruti
 
         }
 
+        // ── Método auxiliar para criar colunas ───────────────────────
+        private void AdicionarColuna(
+            string nomeDataField,
+            string cabecalho,
+            bool editavel)
+        {
+            DataGridViewTextBoxColumn col =
+                new DataGridViewTextBoxColumn();
+            col.DataPropertyName = nomeDataField;
+            col.HeaderText = cabecalho;
+            col.ReadOnly = !editavel;
+            dgvCompra.Columns.Add(col);
+        }
+
+        // ── Carrega todas as compras ─────────────────────────────────
         public void CarregarCompras() // Mudei o nome para algo mais semântico
         {          
 
             try
             {
-                string query = "SELECT * FROM COMPRA ORDER BY Data";
+                string sql = @"
+                    SELECT
+                        Data,
+                        Nome_Produtor,
+                        Produto,
+                        Unidade,
+                        Quantidade,
+                        Valor_unitario,
+                        Valor_total,
+                        Data_Vencimento,
+                        CASE
+                            WHEN Pagamento = 1 THEN 'S'
+                            WHEN Pagamento = 0 THEN 'N'
+                            ELSE 'N'
+                        END AS Pagamento
+                    FROM Compra
+                    ORDER BY Data";
 
                 // Usamos a mesma classe Conexao que centraliza a string do App.config
                 using (SqlConnection conexao = Conexao.CriarConexao())
-                using (SqlCommand comando = new SqlCommand(query, conexao))
+                using (SqlCommand comando = new SqlCommand(sql, conexao))
                 using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
                 {
                     DataTable data = new DataTable();
                     adapter.Fill(data);
+
+                    // Desvincula antes de reconfigurar
+                    dgvCompra.DataSource = null;
+                    dgvCompra.Columns.Clear();
+                    dgvCompra.AutoGenerateColumns = false;
+
+                    // Recria as colunas como TextBox
+                    // Somente 'Pagamento' é editável
+                    AdicionarColuna("Data", "Data", false);
+                    AdicionarColuna("Nome_Produtor", "Produtor", false);
+                    AdicionarColuna("Produto", "Produto", false);
+                    AdicionarColuna("Unidade", "Unidade", false);
+                    AdicionarColuna("Quantidade", "Quantidade", false);
+                    AdicionarColuna("Valor_unitario", "Vl. Unit.", false);
+                    AdicionarColuna("Valor_total", "Vl. Total", false);
+                    AdicionarColuna("Data_Vencimento", "Vencimento", false);
+                    AdicionarColuna("Pagamento", "Pagamento", true);
+                    // ↑ true = editável
+
                     dgvCompra.DataSource = data;
                 }
             }
@@ -49,7 +101,7 @@ namespace Hortifruti
             }
         }
 
-        // _______ Filtra compras porprodutor e por período _____________________________
+        // _______ Filtra compras por produtor e por período _____________________________
         public void FiltrarCompras()
         {
             //Valida o intervalo de datas antes de ir ao banco
@@ -66,15 +118,20 @@ namespace Hortifruti
             try
             {
                 string sql = @"
-                    SELECT Data,
-                           Data_Vencimento,
-                           Nome_Produtor,
-                           Produto,
-                           Unidade,
-                           Quantidade,
-                           Valor_unitario,
-                           Valor_total,
-                           Pagamento
+                    SELECT
+                        Data,
+                        Nome_Produtor,
+                        Produto,
+                        Unidade,
+                        Quantidade,
+                        Valor_unitario,
+                        Valor_total,
+                        Data_Vencimento,
+                        CASE
+                            WHEN Pagamento = 1 THEN 'S'
+                            WHEN Pagamento = 0 THEN 'N'
+                            ELSE 'N'
+                        END AS Pagamento
                     FROM   Compra
                     WHERE  Nome_Produtor LIKE @produtor
                       AND  Data BETWEEN @dataInicio AND @dataFim
@@ -95,6 +152,9 @@ namespace Hortifruti
 
                     DataTable tabela = new DataTable();
                     adapter.Fill(tabela);
+
+                    // Mantém as colunas já configuradas
+                    // apenas atualiza os dados
                     dgvCompra.DataSource = tabela;
                 }
             }
@@ -111,6 +171,9 @@ namespace Hortifruti
         // ── Atualiza pagamento do registro selecionado no grid ───────
         public void AtualizarPagamento()
         {
+            // Força o DataGridView a confirmar edição em andamento
+            dgvCompra.EndEdit();
+
             if (dgvCompra.CurrentCell == null)
             {
                 MessageBox.Show(
@@ -122,11 +185,45 @@ namespace Hortifruti
             }
 
             int linha = dgvCompra.CurrentCell.RowIndex;
+
+            // Verifica células nulas antes de ler
+            if (dgvCompra.Rows[linha].Cells[0].Value == null ||
+                dgvCompra.Rows[linha].Cells[1].Value == null ||
+                dgvCompra.Rows[linha].Cells[2].Value == null ||
+                dgvCompra.Rows[linha].Cells[6].Value == null ||
+                dgvCompra.Rows[linha].Cells[8].Value == null)
+            {
+                MessageBox.Show(
+                    "Não é possível salvar: há campos vazios "
+                  + "na linha selecionada.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            string data = dgvCompra.Rows[linha].Cells[0].Value.ToString();
             string produtor = dgvCompra.Rows[linha].Cells[1].Value.ToString();
             string produto = dgvCompra.Rows[linha].Cells[2].Value.ToString();
-            string data = dgvCompra.Rows[linha].Cells[0].Value.ToString();
-            object preco = dgvCompra.Rows[linha].Cells[5].Value;
-            string pagamento = dgvCompra.Rows[linha].Cells[8].Value.ToString();
+            object preco = dgvCompra.Rows[linha].Cells[6].Value;
+
+            // ── Converte S/N para 1/0 ────────────────────────────────
+            string valorDigitado =
+                dgvCompra.Rows[linha].Cells[8].Value
+                    .ToString().Trim().ToUpper();
+
+            if (valorDigitado != "S" && valorDigitado != "N")
+            {
+                MessageBox.Show(
+                    "Valor inválido para Pagamento.\n"
+                  + "Digite apenas 'S' (sim) ou 'N' (não).",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            int pagamentoBanco = (valorDigitado == "S") ? 1 : 0;
 
             try
             {
@@ -169,7 +266,7 @@ namespace Hortifruti
                     return;
                 }
 
-                // 3. Atualiza o pagamento
+                // 3. Atualiza o pagamento gravando 1 ou 0 no banco
                 string sqlUpdate = @"
                     UPDATE Compra
                     SET    Pagamento  = @pagamento
@@ -178,7 +275,7 @@ namespace Hortifruti
                 using (SqlConnection conexao = Conexao.CriarConexao())
                 using (SqlCommand comando = new SqlCommand(sqlUpdate, conexao))
                 {
-                    comando.Parameters.AddWithValue("@pagamento", pagamento);
+                    comando.Parameters.AddWithValue("@pagamento", pagamentoBanco);
                     comando.Parameters.AddWithValue("@id", idCompra);
 
                     conexao.Open();
